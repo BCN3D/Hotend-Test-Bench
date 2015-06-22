@@ -162,34 +162,34 @@
 <wire x1="1" y1="50" x2="0" y2="49" width="0" layer="20" curve="90"/>
 <wire x1="0" y1="49" x2="0" y2="1" width="0" layer="20"/>
 <wire x1="0" y1="1" x2="1" y2="0" width="0" layer="20" curve="90"/>
-<dimension x1="0" y1="0" x2="100" y2="0" x3="50" y3="-4.7516" textsize="1.778" layer="47" dtype="horizontal" precision="1"/>
-<dimension x1="100" y1="0" x2="100" y2="50" x3="106.2756" y3="25" textsize="1.778" layer="47" dtype="horizontal" precision="1"/>
+<dimension x1="0" y1="0" x2="100" y2="0" x3="50" y3="-4.904" textsize="1.778" layer="47" dtype="horizontal" precision="1"/>
+<dimension x1="100" y1="0" x2="100" y2="50" x3="105.2088" y3="25" textsize="1.778" layer="47" dtype="horizontal" precision="1"/>
 <hole x="2" y="48" drill="3.2"/>
-<hole x="63.1004" y="-8.2108" drill="3.2"/>
 <hole x="2" y="2" drill="3.2"/>
-<hole x="66.614" y="-8.1876" drill="3.2"/>
-<text x="67.44" y="26.9016" size="1.27" layer="21">Hotend TestBench
-Marc Cobler - Spring 2015
+<text x="66.5256" y="28.2732" size="0.8128" layer="21">Hotend TestBench
+Marc Cobler - June 2015
 BCN3D Technologies 
-Fundacio CIM</text>
-<text x="17" y="8" size="1.778" layer="22" rot="MR0">HOTEND1</text>
-<text x="32.5428" y="8" size="1.778" layer="22" rot="MR0">HOTEND2</text>
-<text x="48" y="8" size="1.778" layer="22" rot="MR0">HOTEND3</text>
-<text x="66" y="8" size="1.778" layer="22" rot="MR0">HOTEND4</text>
-<text x="82" y="8" size="1.778" layer="22" rot="MR0">HOTEND5</text>
-<text x="96" y="8" size="1.778" layer="22" rot="MR0">HOTEND6</text>
-<text x="13" y="15" size="1.778" layer="22" rot="MR0">OK</text>
-<text x="28" y="15" size="1.778" layer="22" rot="MR0">OK</text>
-<text x="44" y="15" size="1.778" layer="22" rot="MR0">OK</text>
-<text x="62" y="15" size="1.778" layer="22" rot="MR0">OK</text>
-<text x="78" y="15" size="1.778" layer="22" rot="MR0">OK</text>
-<text x="92" y="15" size="1.778" layer="22" rot="MR0">OK</text>
-<text x="94" y="20" size="1.778" layer="22" rot="MR0">ERROR</text>
-<text x="80" y="20" size="1.778" layer="22" rot="MR0">ERROR</text>
-<text x="64" y="20" size="1.778" layer="22" rot="MR0">ERROR</text>
-<text x="46" y="20" size="1.778" layer="22" rot="MR0">ERROR</text>
-<text x="30" y="20" size="1.778" layer="22" rot="MR0">ERROR</text>
-<text x="15" y="20" size="1.778" layer="22" rot="MR0">ERROR</text>
+Fundacio CIM
+___________________
+v 1.0 - REV_A</text>
+<text x="6.0124" y="9.526" size="1.778" layer="22" rot="SMR180">HOTEND1</text>
+<text x="20.7972" y="9.526" size="1.778" layer="22" rot="SMR180">HOTEND2</text>
+<text x="36.8868" y="9.526" size="1.778" layer="22" rot="SMR180">HOTEND3</text>
+<text x="53.9388" y="9.526" size="1.778" layer="22" rot="SMR180">HOTEND4</text>
+<text x="69.7904" y="9.526" size="1.778" layer="22" rot="SMR180">HOTEND5</text>
+<text x="84.4416" y="9.526" size="1.778" layer="22" rot="SMR180">HOTEND6</text>
+<text x="9.098" y="12.8892" size="1.778" layer="22" rot="SMR180">OK</text>
+<text x="24.1208" y="12.8892" size="1.778" layer="22" rot="SMR180">OK</text>
+<text x="40.1248" y="12.8892" size="1.778" layer="22" rot="SMR180">OK</text>
+<text x="58.0912" y="13.0416" size="1.778" layer="22" rot="SMR180">OK</text>
+<text x="74.0952" y="13.0416" size="1.778" layer="22" rot="SMR180">OK</text>
+<text x="88.1368" y="13.0416" size="1.778" layer="22" rot="SMR180">OK</text>
+<text x="85.832" y="17.7952" size="1.778" layer="22" rot="SMR180">ERROR</text>
+<text x="71.9428" y="17.9476" size="1.778" layer="22" rot="SMR180">ERROR</text>
+<text x="55.9388" y="17.9476" size="1.778" layer="22" rot="SMR180">ERROR</text>
+<text x="37.9724" y="17.9476" size="1.778" layer="22" rot="SMR180">ERROR</text>
+<text x="21.816" y="17.9476" size="1.778" layer="22" rot="SMR180">ERROR</text>
+<text x="6.7932" y="17.9476" size="1.778" layer="22" rot="SMR180">ERROR</text>
 <wire x1="3.8956" y1="23.384" x2="19.526" y2="23.384" width="0.6096" layer="22"/>
 <wire x1="19.526" y1="23.384" x2="34.6136" y2="23.384" width="0.6096" layer="22"/>
 <wire x1="34.6136" y1="23.384" x2="50.9872" y2="23.384" width="0.6096" layer="22"/>
@@ -217,7 +217,17 @@ Fundacio CIM</text>
 <wire x1="69.0372" y1="29.5656" x2="82.296" y2="29.5656" width="0.254" layer="22"/>
 <wire x1="82.296" y1="29.5656" x2="82.296" y2="35.3568" width="0.254" layer="22"/>
 <wire x1="82.296" y1="35.3568" x2="69.0372" y2="35.3568" width="0.254" layer="22"/>
-<text x="79.5528" y="35.9664" size="0.8128" layer="22" rot="MR0">POWER RAILS</text>
+<text x="71.4756" y="36.576" size="0.8128" layer="22" rot="SMR180">POWER RAILS</text>
+<text x="14.478" y="48.1584" size="0.8128" layer="21">DTR</text>
+<text x="17.3736" y="48.1584" size="0.8128" layer="21">RX</text>
+<text x="20.1168" y="48.1584" size="0.8128" layer="21">TX</text>
+<text x="22.2504" y="48.1584" size="0.8128" layer="21">+5V</text>
+<text x="27.2796" y="48.1584" size="0.8128" layer="21">GND</text>
+<text x="25.146" y="48.1584" size="0.8128" layer="21">NC</text>
+<wire x1="13.8684" y1="49.53" x2="13.8684" y2="44.0436" width="0.254" layer="21"/>
+<wire x1="13.8684" y1="44.0436" x2="30.3276" y2="44.0436" width="0.254" layer="21"/>
+<wire x1="30.3276" y1="44.0436" x2="30.3276" y2="49.53" width="0.254" layer="21"/>
+<wire x1="30.3276" y1="49.53" x2="13.8684" y2="49.53" width="0.254" layer="21"/>
 </plain>
 <libraries>
 <library name="MarcEagleParts">
@@ -6932,6 +6942,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="2.5654" y="3.937"/>
 </polygon>
 </package>
+<package name="PTC-1206-WIDE">
+<wire x1="-1.5" y1="0.75" x2="1.5" y2="0.75" width="0.127" layer="51"/>
+<wire x1="1.5" y1="0.75" x2="1.5" y2="-0.75" width="0.127" layer="51"/>
+<wire x1="1.5" y1="-0.75" x2="-1.5" y2="-0.75" width="0.127" layer="51"/>
+<wire x1="-1.5" y1="-0.75" x2="-1.5" y2="0.75" width="0.127" layer="51"/>
+<wire x1="0.635" y1="-0.762" x2="-0.635" y2="-0.762" width="0.2032" layer="21"/>
+<wire x1="-0.635" y1="0.762" x2="0.635" y2="0.762" width="0.2032" layer="21"/>
+<wire x1="-1.143" y1="-1.016" x2="0.254" y2="1.016" width="0.127" layer="51"/>
+<wire x1="0.254" y1="1.016" x2="1.143" y2="1.016" width="0.127" layer="51"/>
+<smd name="1" x="-1.654" y="0" dx="1" dy="1.8" layer="1"/>
+<smd name="2" x="1.654" y="0" dx="1" dy="1.8" layer="1"/>
+<text x="-1.524" y="1.27" size="0.4064" layer="25">&gt;Name</text>
+<text x="-1.524" y="-1.651" size="0.4064" layer="27">&gt;Value</text>
+</package>
 </packages>
 </library>
 <library name="resistor-net">
@@ -7302,332 +7326,621 @@ design rules under a new name.</description>
 <elements>
 <element name="Q1" library="MarcEagleParts" package="SOIC8" value="MOSFET-N" x="10.066" y="15.8844" smashed="yes" rot="R180">
 <attribute name="NAME" x="12.8092" y="16.7988" size="0.8128" layer="25" rot="SR270"/>
+<attribute name="OC_FARNELL" value="1551903" x="10.066" y="15.8844" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="INTERNATIONAL RECTIFIER" x="10.066" y="15.8844" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="IRF8736PBF" x="10.066" y="15.8844" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="D1" library="SparkFun-DiscreteSemi" package="SMA-DIODE" value="MBRA140" x="8.1424" y="8.6962" smashed="yes" rot="R180">
 <attribute name="PROD_ID" value="DIO-08053" x="-8.3676" y="22.6662" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="8.9044" y="11.16" size="0.8128" layer="25" rot="R180"/>
+<attribute name="OC_FARNELL" value="1843670" x="8.1424" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="DIODES INC." x="8.1424" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="B140-13-F" x="8.1424" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="LED1" library="led" package="CHIP-LED0805" value="" x="5.3086" y="17.0274" smashed="yes">
 <attribute name="NAME" x="3.5814" y="18.2466" size="0.8128" layer="25" rot="SR270"/>
 <attribute name="VALUE" x="7.8486" y="15.7574" size="1.27" layer="27" rot="R90"/>
+<attribute name="OC_FARNELL" value="1716765" x="5.3086" y="17.0274" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="5.3086" y="17.0274" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="5.3086" y="17.0274" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R1" library="rcl" package="R0805" value="5k6" x="5.2578" y="12.684" smashed="yes" rot="R270">
 <attribute name="NAME" x="3.2512" y="13.2428" size="0.8128" layer="25" rot="SR270"/>
+<attribute name="OC_FARNELL" value="2447693" x="5.2578" y="12.684" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="5.2578" y="12.684" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="MCWR08X5601FTL" x="5.2578" y="12.684" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="R2" library="rcl" package="R0805" value="100" x="11.4046" y="22.6916" smashed="yes" rot="R90">
 <attribute name="NAME" x="10.6172" y="24.8506" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1577644" x="11.4046" y="22.6916" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="PANASONIC ELECTRONIC COMPONENTS" x="11.4046" y="22.6916" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="ERA6AEB101V" x="11.4046" y="22.6916" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="R3" library="rcl" package="R0805" value="10k" x="8.7884" y="22.6916" smashed="yes" rot="R90">
 <attribute name="NAME" x="8.1026" y="24.876" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="2469474" x="8.7884" y="22.6916" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="BOURNS" x="8.7884" y="22.6916" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="0621-013K500-AB103" x="8.7884" y="22.6916" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="HOTEND1" library="pinhead" package="1X04" value="" x="11.524" y="4.5" smashed="yes">
 <attribute name="NAME" x="7.8918" y="1.6806" size="1.016" layer="25" ratio="10"/>
 <attribute name="VALUE" x="6.444" y="1.325" size="1.27" layer="27"/>
+<attribute name="OC_FARNELL" value="unknown" x="11.524" y="4.5" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="11.524" y="4.5" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="11.524" y="4.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R4" library="rcl" package="R0805" value="4k7" x="15.0368" y="11.414" smashed="yes" rot="R180">
 <attribute name="NAME" x="14.2748" y="12.5062" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="2118118" x="15.0368" y="11.414" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="15.0368" y="11.414" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="1-2176085-7" x="15.0368" y="11.414" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C1" library="rcl" package="C0805K" value="100n" x="14.986" y="8.874" smashed="yes">
 <attribute name="NAME" x="14.2908" y="6.9296" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1740681" x="14.986" y="8.874" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="AVX" x="14.986" y="8.874" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="08051C104KAT2A" x="14.986" y="8.874" size="1.778" layer="27" display="off"/>
 </element>
 <element name="Q2" library="MarcEagleParts" package="SOIC8" value="MOSFET-N" x="24.9936" y="15.8844" smashed="yes" rot="R180">
 <attribute name="NAME" x="27.5844" y="15.732" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1551903" x="24.9936" y="15.8844" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="INTERNATIONAL RECTIFIER" x="24.9936" y="15.8844" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="IRF8736PBF" x="24.9936" y="15.8844" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="D2" library="SparkFun-DiscreteSemi" package="SMA-DIODE" value="MBRA140" x="23.114" y="8.6962" smashed="yes" rot="R180">
 <attribute name="PROD_ID" value="DIO-08053" x="37.084" y="-14.1638" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="23.876" y="11.16" size="0.8128" layer="25" rot="R180"/>
+<attribute name="OC_FARNELL" value="1843670" x="23.114" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="DIODES INC." x="23.114" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="B140-13-F" x="23.114" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="LED2" library="led" package="CHIP-LED0805" value="" x="20.0152" y="16.9258" smashed="yes">
 <attribute name="NAME" x="18.2118" y="18.1196" size="0.8128" layer="25" rot="SR270"/>
 <attribute name="VALUE" x="22.5552" y="15.6558" size="1.27" layer="27" rot="R90"/>
+<attribute name="OC_FARNELL" value="1716765" x="20.0152" y="16.9258" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="20.0152" y="16.9258" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="20.0152" y="16.9258" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R5" library="rcl" package="R0805" value="5k6" x="20.0152" y="12.7856" smashed="yes" rot="R270">
 <attribute name="NAME" x="18.034" y="13.4206" size="0.8128" layer="25" rot="SR270"/>
+<attribute name="OC_FARNELL" value="2447693" x="20.0152" y="12.7856" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="20.0152" y="12.7856" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="MCWR08X5601FTL" x="20.0152" y="12.7856" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="R6" library="rcl" package="R0805" value="100" x="26.416" y="22.59" smashed="yes" rot="R90">
 <attribute name="NAME" x="25.6794" y="24.622" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1577644" x="26.416" y="22.59" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="PANASONIC ELECTRONIC COMPONENTS" x="26.416" y="22.59" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="ERA6AEB101V" x="26.416" y="22.59" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="R7" library="rcl" package="R0805" value="10k" x="23.6728" y="22.5646" smashed="yes" rot="R90">
 <attribute name="NAME" x="22.987" y="24.622" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="2469474" x="23.6728" y="22.5646" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="BOURNS" x="23.6728" y="22.5646" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="0621-013K500-AB103" x="23.6728" y="22.5646" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="HOTEND2" library="pinhead" package="1X04" value="" x="26.3716" y="4.5" smashed="yes">
 <attribute name="NAME" x="22.968" y="1.6806" size="1.016" layer="25" ratio="10"/>
 <attribute name="VALUE" x="21.2916" y="1.325" size="1.27" layer="27"/>
+<attribute name="OC_FARNELL" value="unknown" x="26.3716" y="4.5" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="26.3716" y="4.5" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="26.3716" y="4.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R8" library="rcl" package="R0805" value="4k7" x="30.2768" y="11.4648" smashed="yes" rot="R180">
 <attribute name="NAME" x="29.591" y="12.6078" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="2118118" x="30.2768" y="11.4648" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="30.2768" y="11.4648" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="1-2176085-7" x="30.2768" y="11.4648" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C2" library="rcl" package="C0805K" value="100n" x="30.2514" y="9.0264" smashed="yes">
 <attribute name="NAME" x="29.6324" y="7.0058" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1740681" x="30.2514" y="9.0264" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="AVX" x="30.2514" y="9.0264" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="08051C104KAT2A" x="30.2514" y="9.0264" size="1.778" layer="27" display="off"/>
 </element>
 <element name="Q3" library="MarcEagleParts" package="SOIC8" value="MOSFET-N" x="41.9862" y="15.8844" smashed="yes" rot="R180">
 <attribute name="NAME" x="44.6024" y="15.3002" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1551903" x="41.9862" y="15.8844" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="INTERNATIONAL RECTIFIER" x="41.9862" y="15.8844" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="IRF8736PBF" x="41.9862" y="15.8844" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="D3" library="SparkFun-DiscreteSemi" package="SMA-DIODE" value="MBRA140" x="39.8592" y="8.6962" smashed="yes" rot="R180">
 <attribute name="PROD_ID" value="DIO-08053" x="53.8292" y="-14.1638" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="40.6212" y="11.16" size="0.8128" layer="25" rot="R180"/>
+<attribute name="OC_FARNELL" value="1843670" x="39.8592" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="DIODES INC." x="39.8592" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="B140-13-F" x="39.8592" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="LED3" library="led" package="CHIP-LED0805" value="" x="36.5252" y="17.4846" smashed="yes">
 <attribute name="NAME" x="34.7726" y="18.78" size="0.8128" layer="25" rot="SR270"/>
 <attribute name="VALUE" x="39.0652" y="16.2146" size="1.27" layer="27" rot="R90"/>
+<attribute name="OC_FARNELL" value="1716765" x="36.5252" y="17.4846" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="36.5252" y="17.4846" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="36.5252" y="17.4846" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R9" library="rcl" package="R0805" value="5k6" x="36.4998" y="13.2428" smashed="yes" rot="R270">
 <attribute name="NAME" x="34.6202" y="14.0048" size="0.8128" layer="25" rot="SR270"/>
+<attribute name="OC_FARNELL" value="2447693" x="36.4998" y="13.2428" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="36.4998" y="13.2428" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="MCWR08X5601FTL" x="36.4998" y="13.2428" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="R10" library="rcl" package="R0805" value="100" x="43.3832" y="22.844" smashed="yes" rot="R90">
 <attribute name="NAME" x="42.3164" y="24.876" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1577644" x="43.3832" y="22.844" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="PANASONIC ELECTRONIC COMPONENTS" x="43.3832" y="22.844" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="ERA6AEB101V" x="43.3832" y="22.844" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="R11" library="rcl" package="R0805" value="10k" x="40.5638" y="22.8948" smashed="yes" rot="R90">
 <attribute name="NAME" x="39.5478" y="24.9522" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="2469474" x="40.5638" y="22.8948" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="BOURNS" x="40.5638" y="22.8948" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="0621-013K500-AB103" x="40.5638" y="22.8948" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="HOTEND3" library="pinhead" package="1X04" value="" x="42.762" y="4.5" smashed="yes">
 <attribute name="NAME" x="39.7394" y="1.6044" size="1.016" layer="25" ratio="10"/>
 <attribute name="VALUE" x="37.682" y="1.325" size="1.27" layer="27"/>
+<attribute name="OC_FARNELL" value="unknown" x="42.762" y="4.5" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="42.762" y="4.5" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="42.762" y="4.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R12" library="rcl" package="R0805" value="4k7" x="47.625" y="11.4648" smashed="yes" rot="R180">
 <attribute name="NAME" x="46.5328" y="12.6078" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="2118118" x="47.625" y="11.4648" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="47.625" y="11.4648" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="1-2176085-7" x="47.625" y="11.4648" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C3" library="rcl" package="C0805K" value="100n" x="47.625" y="9.0518" smashed="yes">
 <attribute name="NAME" x="46.8536" y="7.0312" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1740681" x="47.625" y="9.0518" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="AVX" x="47.625" y="9.0518" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="08051C104KAT2A" x="47.625" y="9.0518" size="1.778" layer="27" display="off"/>
 </element>
 <element name="Q4" library="MarcEagleParts" package="SOIC8" value="MOSFET-N" x="58.5216" y="15.8844" smashed="yes" rot="R180">
 <attribute name="NAME" x="61.3156" y="15.3256" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1551903" x="58.5216" y="15.8844" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="INTERNATIONAL RECTIFIER" x="58.5216" y="15.8844" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="IRF8736PBF" x="58.5216" y="15.8844" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="D4" library="SparkFun-DiscreteSemi" package="SMA-DIODE" value="MBRA140" x="56.5216" y="8.6962" smashed="yes" rot="R180">
 <attribute name="PROD_ID" value="DIO-08053" x="71.7616" y="-14.1638" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="57.2836" y="11.16" size="0.8128" layer="25" rot="R180"/>
+<attribute name="OC_FARNELL" value="1843670" x="56.5216" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="DIODES INC." x="56.5216" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="B140-13-F" x="56.5216" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="LED4" library="led" package="CHIP-LED0805" value="" x="53.5432" y="17.3134" smashed="yes">
 <attribute name="NAME" x="51.6636" y="18.6276" size="0.8128" layer="25" rot="SR270"/>
 <attribute name="VALUE" x="56.0832" y="16.0434" size="1.27" layer="27" rot="R90"/>
+<attribute name="OC_FARNELL" value="1716765" x="53.5432" y="17.3134" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="53.5432" y="17.3134" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="53.5432" y="17.3134" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R13" library="rcl" package="R0805" value="5k6" x="53.5686" y="13.0904" smashed="yes" rot="R270">
 <attribute name="NAME" x="51.6128" y="14.0048" size="0.8128" layer="25" rot="SR270"/>
+<attribute name="OC_FARNELL" value="2447693" x="53.5686" y="13.0904" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="53.5686" y="13.0904" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="MCWR08X5601FTL" x="53.5686" y="13.0904" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="R14" library="rcl" package="R0805" value="100" x="59.6646" y="22.717" smashed="yes" rot="R90">
 <attribute name="NAME" x="58.6486" y="24.749" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1577644" x="59.6646" y="22.717" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="PANASONIC ELECTRONIC COMPONENTS" x="59.6646" y="22.717" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="ERA6AEB101V" x="59.6646" y="22.717" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="R15" library="rcl" package="R0805" value="10k" x="57.2262" y="22.7424" smashed="yes" rot="R90">
 <attribute name="NAME" x="56.2356" y="24.8252" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="2469474" x="57.2262" y="22.7424" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="BOURNS" x="57.2262" y="22.7424" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="0621-013K500-AB103" x="57.2262" y="22.7424" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="HOTEND4" library="pinhead" package="1X04" value="" x="59.8476" y="4.5" smashed="yes">
 <attribute name="NAME" x="56.444" y="1.5282" size="1.016" layer="25" ratio="10"/>
 <attribute name="VALUE" x="54.7676" y="1.325" size="1.27" layer="27"/>
+<attribute name="OC_FARNELL" value="unknown" x="59.8476" y="4.5" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="59.8476" y="4.5" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="59.8476" y="4.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R16" library="rcl" package="R0805" value="4k7" x="64.2112" y="11.4648" smashed="yes" rot="R180">
 <attribute name="NAME" x="63.3222" y="12.6078" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="2118118" x="64.2112" y="11.4648" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="64.2112" y="11.4648" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="1-2176085-7" x="64.2112" y="11.4648" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C4" library="rcl" package="C0805K" value="100n" x="64.1858" y="8.9248" smashed="yes">
 <attribute name="NAME" x="63.3382" y="6.9804" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1740681" x="64.1858" y="8.9248" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="AVX" x="64.1858" y="8.9248" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="08051C104KAT2A" x="64.1858" y="8.9248" size="1.778" layer="27" display="off"/>
 </element>
 <element name="Q5" library="MarcEagleParts" package="SOIC8" value="MOSFET-N" x="75.7428" y="16.1892" smashed="yes" rot="R180">
 <attribute name="NAME" x="71.7042" y="15.732" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1551903" x="75.7428" y="16.1892" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="INTERNATIONAL RECTIFIER" x="75.7428" y="16.1892" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="IRF8736PBF" x="75.7428" y="16.1892" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="D5" library="SparkFun-DiscreteSemi" package="SMA-DIODE" value="MBRA140" x="72.8284" y="8.6962" smashed="yes" rot="R180">
 <attribute name="PROD_ID" value="DIO-08053" x="88.0684" y="-14.1638" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="73.5142" y="11.16" size="0.8128" layer="25" rot="R180"/>
+<attribute name="OC_FARNELL" value="1843670" x="72.8284" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="DIODES INC." x="72.8284" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="B140-13-F" x="72.8284" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="LED5" library="led" package="CHIP-LED0805" value="" x="70.8914" y="17.5354" smashed="yes">
 <attribute name="NAME" x="69.0626" y="18.8816" size="0.8128" layer="25" rot="SR270"/>
 <attribute name="VALUE" x="73.4314" y="16.2654" size="1.27" layer="27" rot="R90"/>
+<attribute name="OC_FARNELL" value="1716765" x="70.8914" y="17.5354" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="70.8914" y="17.5354" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="70.8914" y="17.5354" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R17" library="rcl" package="R0805" value="5k6" x="70.9168" y="13.3952" smashed="yes" rot="R270">
 <attribute name="NAME" x="69.0024" y="14.4018" size="0.8128" layer="25" rot="SR270"/>
+<attribute name="OC_FARNELL" value="2447693" x="70.9168" y="13.3952" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="70.9168" y="13.3952" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="MCWR08X5601FTL" x="70.9168" y="13.3952" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="R18" library="rcl" package="R0805" value="100" x="77.0128" y="23.0218" smashed="yes" rot="R90">
 <attribute name="NAME" x="75.946" y="25.1554" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1577644" x="77.0128" y="23.0218" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="PANASONIC ELECTRONIC COMPONENTS" x="77.0128" y="23.0218" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="ERA6AEB101V" x="77.0128" y="23.0218" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="R19" library="rcl" package="R0805" value="10k" x="74.422" y="23.0284" smashed="yes" rot="R90">
 <attribute name="NAME" x="73.3552" y="25.2062" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="2469474" x="74.422" y="23.0284" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="BOURNS" x="74.422" y="23.0284" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="0621-013K500-AB103" x="74.422" y="23.0284" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="HOTEND5" library="pinhead" package="1X04" value="" x="76" y="4.5" smashed="yes">
 <attribute name="NAME" x="72.5964" y="1.5282" size="1.016" layer="25" ratio="10"/>
 <attribute name="VALUE" x="70.92" y="1.325" size="1.27" layer="27"/>
+<attribute name="OC_FARNELL" value="unknown" x="76" y="4.5" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="76" y="4.5" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="76" y="4.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R20" library="rcl" package="R0805" value="4k7" x="80.5688" y="11.4394" smashed="yes" rot="R180">
 <attribute name="NAME" x="79.6036" y="12.684" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="2118118" x="80.5688" y="11.4394" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="80.5688" y="11.4394" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="1-2176085-7" x="80.5688" y="11.4394" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C5" library="rcl" package="C0805K" value="100n" x="80.6704" y="8.874" smashed="yes">
 <attribute name="NAME" x="79.8228" y="6.9296" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1740681" x="80.6704" y="8.874" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="AVX" x="80.6704" y="8.874" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="08051C104KAT2A" x="80.6704" y="8.874" size="1.778" layer="27" display="off"/>
 </element>
 <element name="Q6" library="MarcEagleParts" package="SOIC8" value="MOSFET-N" x="90.5256" y="16.1892" smashed="yes" rot="R180">
 <attribute name="NAME" x="86.4362" y="15.3002" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1551903" x="90.5256" y="16.1892" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="INTERNATIONAL RECTIFIER" x="90.5256" y="16.1892" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="IRF8736PBF" x="90.5256" y="16.1892" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="D6" library="SparkFun-DiscreteSemi" package="SMA-DIODE" value="MBRA140" x="86.8492" y="8.6962" smashed="yes" rot="R180">
 <attribute name="PROD_ID" value="DIO-08053" x="102.0892" y="-14.1638" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="NAME" x="87.535" y="11.16" size="0.8128" layer="25" rot="R180"/>
+<attribute name="OC_FARNELL" value="1843670" x="86.8492" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="DIODES INC." x="86.8492" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="B140-13-F" x="86.8492" y="8.6962" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="LED6" library="led" package="CHIP-LED0805" value="" x="85.598" y="17.6182" smashed="yes">
 <attribute name="NAME" x="83.693" y="18.9324" size="0.8128" layer="25" rot="SR270"/>
 <attribute name="VALUE" x="88.138" y="16.3482" size="1.27" layer="27" rot="R90"/>
+<attribute name="OC_FARNELL" value="1716765" x="85.598" y="17.6182" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="85.598" y="17.6182" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="85.598" y="17.6182" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R21" library="rcl" package="R0805" value="5k6" x="85.598" y="13.5476" smashed="yes" rot="R270">
 <attribute name="NAME" x="83.6582" y="14.5034" size="0.8128" layer="25" rot="SR270"/>
+<attribute name="OC_FARNELL" value="2447693" x="85.598" y="13.5476" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="85.598" y="13.5476" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="MCWR08X5601FTL" x="85.598" y="13.5476" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="R22" library="rcl" package="R0805" value="100" x="91.9226" y="23.0218" smashed="yes" rot="R90">
 <attribute name="NAME" x="90.8812" y="25.1046" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1577644" x="91.9226" y="23.0218" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="PANASONIC ELECTRONIC COMPONENTS" x="91.9226" y="23.0218" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="ERA6AEB101V" x="91.9226" y="23.0218" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="R23" library="rcl" package="R0805" value="10k" x="89.027" y="23.0472" smashed="yes" rot="R90">
 <attribute name="NAME" x="88.011" y="25.1046" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="2469474" x="89.027" y="23.0472" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="BOURNS" x="89.027" y="23.0472" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="0621-013K500-AB103" x="89.027" y="23.0472" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="HOTEND6" library="pinhead" package="1X04" value="" x="90" y="4.5" smashed="yes">
 <attribute name="NAME" x="86.444" y="1.5282" size="1.016" layer="25" ratio="10"/>
 <attribute name="VALUE" x="84.92" y="1.325" size="1.27" layer="27"/>
+<attribute name="OC_FARNELL" value="unknown" x="90" y="4.5" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="90" y="4.5" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="90" y="4.5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="R24" library="rcl" package="R0805" value="4k7" x="93.6752" y="10.5918" smashed="yes" rot="R180">
 <attribute name="NAME" x="93.5228" y="11.795" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="2118118" x="93.6752" y="10.5918" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="TE CONNECTIVITY" x="93.6752" y="10.5918" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="1-2176085-7" x="93.6752" y="10.5918" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C6" library="rcl" package="C0805K" value="100n" x="93.7006" y="8.2804" smashed="yes">
 <attribute name="NAME" x="92.853" y="6.3454" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1740681" x="93.7006" y="8.2804" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="AVX" x="93.7006" y="8.2804" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="08051C104KAT2A" x="93.7006" y="8.2804" size="1.778" layer="27" display="off"/>
 </element>
 <element name="U1" library="SparkFun-DigitalIC" package="TQFP32-08" value="ATMEGA328P_TQFP" x="30.9372" y="36.5252" smashed="yes">
 <attribute name="PROD_ID" value="IC-09069" x="30.9372" y="36.5252" size="1.778" layer="27" display="off"/>
-<attribute name="NAME" x="31.6738" y="31.242" size="0.8128" layer="25" rot="R180"/>
+<attribute name="NAME" x="25.9334" y="40.5384" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1972086" x="30.9372" y="36.5252" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="ATMEL" x="30.9372" y="36.5252" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="ATMEGA328-AU" x="30.9372" y="36.5252" size="1.778" layer="27" display="off"/>
 </element>
 <element name="Y1" library="SparkFun-FreqCtrl" package="HC49US" value="20MHz" x="19.3802" y="31.5214" smashed="yes" rot="R180">
 <attribute name="NAME" x="16.0782" y="34.163" size="0.8128" layer="25" ratio="10"/>
+<attribute name="OC_FARNELL" value="1842224" x="19.3802" y="31.5214" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="TXC" x="19.3802" y="31.5214" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="9B-20.000MAAJ-B" x="19.3802" y="31.5214" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C7" library="rcl" package="C0805K" value="22p" x="21.2598" y="27.813" smashed="yes" rot="R180">
 <attribute name="NAME" x="20.4884" y="25.8686" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="317500" x="21.2598" y="27.813" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="AVX" x="21.2598" y="27.813" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="08051A220JAT2A" x="21.2598" y="27.813" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C8" library="rcl" package="C0805K" value="22p" x="17.0688" y="27.7876" smashed="yes">
 <attribute name="NAME" x="16.2974" y="25.9194" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="317500" x="17.0688" y="27.7876" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="AVX" x="17.0688" y="27.7876" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="08051A220JAT2A" x="17.0688" y="27.7876" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C9" library="rcl" package="C0805K" value="100n" x="23.0378" y="38.1254" smashed="yes" rot="R180">
 <attribute name="NAME" x="22.368" y="39.1782" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1740681" x="23.0378" y="38.1254" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="AVX" x="23.0378" y="38.1254" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="08051C104KAT2A" x="23.0378" y="38.1254" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C10" library="rcl" package="C0805K" value="100n" x="23.0378" y="36.1442" smashed="yes" rot="R180">
 <attribute name="NAME" x="21.987" y="34.3014" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1740681" x="23.0378" y="36.1442" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="AVX" x="23.0378" y="36.1442" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="08051C104KAT2A" x="23.0378" y="36.1442" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C11" library="rcl" package="C0805K" value="100n" x="38.8366" y="33.6804" smashed="yes">
 <attribute name="NAME" x="37.9128" y="31.8884" size="0.8128" layer="25" rot="SR0"/>
+<attribute name="OC_FARNELL" value="1740681" x="38.8366" y="33.6804" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="AVX" x="38.8366" y="33.6804" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="08051C104KAT2A" x="38.8366" y="33.6804" size="1.778" layer="27" display="off"/>
 </element>
 <element name="ICSP" library="SparkFun-Connectors" package="2X3" value="AVR_SPI_PRG_6PTH" x="39.6748" y="42.926" smashed="yes" rot="R90">
 <attribute name="NAME" x="34.417" y="47.117" size="1.016" layer="25" ratio="10" rot="SR270"/>
+<attribute name="OC_FARNELL" value="unknown" x="39.6748" y="42.926" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="" x="39.6748" y="42.926" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="" x="39.6748" y="42.926" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="R26" library="rcl" package="R0805" value="10k" x="10.922" y="41.2242" smashed="yes" rot="R270">
 <attribute name="NAME" x="9.9568" y="38.2524" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="2469474" x="10.922" y="41.2242" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="BOURNS" x="10.922" y="41.2242" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="0621-013K500-AB103" x="10.922" y="41.2242" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="RESET" library="adafruit" package="EVQ-Q2" value="SPST_TACT-EVQQ2" x="6.5024" y="37.5412" smashed="yes" rot="R90">
 <attribute name="NAME" x="3.1548" y="35.9128" size="0.8128" layer="25" rot="R90"/>
+<attribute name="OC_FARNELL" value="9962913" x="6.5024" y="37.5412" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="PANASONIC ELECTRONIC COMPONENTS" x="6.5024" y="37.5412" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="EVQQ2503W" x="6.5024" y="37.5412" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
-<element name="JP8" library="SparkFun-Connectors" package="FTDI_BASIC" value="FTDI_BASICPTH" x="15.7706" y="45.8216" smashed="yes"/>
+<element name="JP8" library="SparkFun-Connectors" package="FTDI_BASIC" value="FTDI_BASICPTH" x="15.7706" y="45.8216" smashed="yes">
+<attribute name="OC_FARNELL" value="unknown" x="15.7706" y="45.8216" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="" x="15.7706" y="45.8216" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="" x="15.7706" y="45.8216" size="1.778" layer="27" display="off"/>
+</element>
 <element name="C12" library="rcl" package="C0805K" value="100n" x="15.748" y="41.148" smashed="yes" rot="R90">
 <attribute name="NAME" x="14.6972" y="38.467" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1740681" x="15.748" y="41.148" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="AVX" x="15.748" y="41.148" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="08051C104KAT2A" x="15.748" y="41.148" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="U2" library="SparkFun-PowerIC" package="TO-252" value="KA7805ERTF" x="72.4916" y="41.8084" smashed="yes" rot="R180">
 <attribute name="PROD_ID" value="VREG-12370" x="72.4916" y="41.8084" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="71.8566" y="45.974" size="0.8128" layer="25"/>
+<attribute name="NAME" x="71.8566" y="45.5168" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="2102585" x="72.4916" y="41.8084" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="FAIRCHILD SEMICONDUCTOR" x="72.4916" y="41.8084" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="KA7805ERTF" x="72.4916" y="41.8084" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="PC1" library="MarcEagleParts" package="MOLEX_MINIFIT-JR" value="POWER INPUT" x="96.4852" y="47.6664" smashed="yes" rot="R180">
 <attribute name="VALUE" x="85.8228" y="33.1432" size="1.016" layer="27" rot="SR0"/>
+<attribute name="OC_FARNELL" value="9963553" x="96.4852" y="47.6664" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MF" value="MOLEX" x="96.4852" y="47.6664" size="1.778" layer="27" rot="R180" display="off"/>
+<attribute name="MPN" value="39303045" x="96.4852" y="47.6664" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
 <element name="C13" library="rcl" package="C0805K" value="100n" x="67.1322" y="47.5996" smashed="yes" rot="R90">
 <attribute name="NAME" x="65.9544" y="44.7662" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1740681" x="67.1322" y="47.5996" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="AVX" x="67.1322" y="47.5996" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="08051C104KAT2A" x="67.1322" y="47.5996" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="C14" library="rcl" package="C0805K" value="330n" x="77.8002" y="47.625" smashed="yes" rot="R90">
 <attribute name="NAME" x="76.6478" y="44.7662" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1657934" x="77.8002" y="47.625" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="AVX" x="77.8002" y="47.625" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="08055C334KAT2A" x="77.8002" y="47.625" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="D7" library="SparkFun-DiscreteSemi" package="SMA-DIODE" value="MBRA140" x="77.9018" y="40.1574" smashed="yes" rot="R90">
 <attribute name="PROD_ID" value="DIO-08053" x="77.9018" y="40.1574" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="77.1144" y="36.1442" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1843670" x="77.9018" y="40.1574" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="DIODES INC." x="77.9018" y="40.1574" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="B140-13-F" x="77.9018" y="40.1574" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="C15" library="rcl" package="C0805K" value="100n" x="38.862" y="36.1188" smashed="yes">
 <attribute name="NAME" x="37.9382" y="37.1462" size="0.8128" layer="25" rot="SR0"/>
+<attribute name="OC_FARNELL" value="1740681" x="38.862" y="36.1188" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="AVX" x="38.862" y="36.1188" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="08051C104KAT2A" x="38.862" y="36.1188" size="1.778" layer="27" display="off"/>
 </element>
 <element name="IC1" library="SparkFun-DigitalIC" package="SO16" value="74LS595D" x="51.4444" y="37.986" smashed="yes" rot="R90">
 <attribute name="PROD_ID" value="IC-07875" x="51.4444" y="37.986" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="50.562" y="31.7878" size="0.8128" layer="25" ratio="10" rot="SR0"/>
+<attribute name="OC_FARNELL" value="1740114" x="51.4444" y="37.986" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="TEXAS INSTRUMENTS" x="51.4444" y="37.986" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="SN74AHCT595D" x="51.4444" y="37.986" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="IC2" library="SparkFun-DigitalIC" package="SO16" value="74LS595D" x="61.3928" y="37.9024" smashed="yes" rot="R90">
 <attribute name="PROD_ID" value="IC-07875" x="61.3928" y="37.9024" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="60.578" y="31.719" size="0.8128" layer="25" ratio="10" rot="SR0"/>
+<attribute name="OC_FARNELL" value="1740114" x="61.3928" y="37.9024" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="TEXAS INSTRUMENTS" x="61.3928" y="37.9024" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="SN74AHCT595D" x="61.3928" y="37.9024" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="LED7" library="led" package="CHIP-LED0805" value="" x="11" y="19" smashed="yes" rot="MR270">
 <attribute name="VALUE" x="12.27" y="16.46" size="1.27" layer="28" rot="MR0"/>
+<attribute name="OC_FARNELL" value="1716765" x="11" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="11" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="11" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
 <element name="LED8" library="led" package="CHIP-LED0805" value="" x="11" y="14" smashed="yes" rot="MR270">
 <attribute name="VALUE" x="12.27" y="11.46" size="1.27" layer="28" rot="MR0"/>
+<attribute name="OC_FARNELL" value="1716765" x="11" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="11" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="11" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
 <element name="LED9" library="led" package="CHIP-LED0805" value="" x="26" y="19" smashed="yes" rot="MR270">
 <attribute name="VALUE" x="27.27" y="16.46" size="1.27" layer="28" rot="MR0"/>
+<attribute name="OC_FARNELL" value="1716765" x="26" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="26" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="26" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
 <element name="LED10" library="led" package="CHIP-LED0805" value="" x="26" y="14" smashed="yes" rot="MR270">
 <attribute name="VALUE" x="27.27" y="11.46" size="1.27" layer="28" rot="MR0"/>
+<attribute name="OC_FARNELL" value="1716765" x="26" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="26" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="26" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
 <element name="LED11" library="led" package="CHIP-LED0805" value="" x="42" y="19" smashed="yes" rot="MR270">
 <attribute name="VALUE" x="43.27" y="16.46" size="1.27" layer="28" rot="MR0"/>
+<attribute name="OC_FARNELL" value="1716765" x="42" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="42" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="42" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
 <element name="LED12" library="led" package="CHIP-LED0805" value="" x="42" y="14" smashed="yes" rot="MR270">
 <attribute name="VALUE" x="43.27" y="11.46" size="1.27" layer="28" rot="MR0"/>
+<attribute name="OC_FARNELL" value="1716765" x="42" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="42" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="42" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
 <element name="LED13" library="led" package="CHIP-LED0805" value="" x="60" y="19" smashed="yes" rot="MR270">
 <attribute name="VALUE" x="61.27" y="16.46" size="1.27" layer="28" rot="MR0"/>
+<attribute name="OC_FARNELL" value="1716765" x="60" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="60" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="60" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
 <element name="LED14" library="led" package="CHIP-LED0805" value="" x="60" y="14" smashed="yes" rot="MR270">
 <attribute name="VALUE" x="61.27" y="11.46" size="1.27" layer="28" rot="MR0"/>
+<attribute name="OC_FARNELL" value="1716765" x="60" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="60" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="60" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
 <element name="LED15" library="led" package="CHIP-LED0805" value="" x="76" y="19" smashed="yes" rot="MR270">
 <attribute name="VALUE" x="77.27" y="16.46" size="1.27" layer="28" rot="MR0"/>
+<attribute name="OC_FARNELL" value="1716765" x="76" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="76" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="76" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
 <element name="LED16" library="led" package="CHIP-LED0805" value="" x="76" y="14" smashed="yes" rot="MR270">
 <attribute name="VALUE" x="77.27" y="11.46" size="1.27" layer="28" rot="MR0"/>
+<attribute name="OC_FARNELL" value="1716765" x="76" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="76" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="76" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
 <element name="LED17" library="led" package="CHIP-LED0805" value="" x="90" y="19" smashed="yes" rot="MR270">
 <attribute name="VALUE" x="91.27" y="16.46" size="1.27" layer="28" rot="MR0"/>
+<attribute name="OC_FARNELL" value="1716765" x="90" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="90" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="90" y="19" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
 <element name="LED18" library="led" package="CHIP-LED0805" value="" x="90" y="14" smashed="yes" rot="MR270">
 <attribute name="VALUE" x="91.27" y="11.46" size="1.27" layer="28" rot="MR0"/>
+<attribute name="OC_FARNELL" value="1716765" x="90" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="90" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="90" y="14" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
 <element name="RN1" library="resistor-net" package="CTS742C083" value="CTS742C083" x="48.1524" y="28" smashed="yes" rot="MR180">
 <attribute name="OC_NEWARK" value="unknown" x="48.1524" y="28" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="MPN" value="" x="48.1524" y="28" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="MF" value="" x="48.1524" y="28" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="48.1524" y="28" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="NAME" x="46.3744" y="26.476" size="1.27" layer="26" rot="MR180"/>
+<attribute name="NAME" x="46.3744" y="26.476" size="1.27" layer="26" rot="SMR180"/>
 </element>
 <element name="RN2" library="resistor-net" package="CTS742C083" value="CTS742C083" x="55" y="28" smashed="yes" rot="MR180">
 <attribute name="OC_NEWARK" value="unknown" x="55" y="28" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="MPN" value="" x="55" y="28" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="MF" value="" x="55" y="28" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="55" y="28" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="NAME" x="53.222" y="26.476" size="1.27" layer="26" rot="MR180"/>
+<attribute name="NAME" x="53.222" y="26.476" size="1.27" layer="26" rot="SMR180"/>
 </element>
 <element name="RN3" library="resistor-net" package="CTS742C083" value="CTS742C083" x="64.3142" y="28" smashed="yes" rot="MR180">
 <attribute name="OC_NEWARK" value="unknown" x="64.3142" y="28" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="MPN" value="" x="64.3142" y="28" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="MF" value="" x="64.3142" y="28" size="1.778" layer="28" rot="MR180" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="64.3142" y="28" size="1.778" layer="28" rot="MR180" display="off"/>
-<attribute name="NAME" x="62.5362" y="26.476" size="1.27" layer="26" rot="MR180"/>
+<attribute name="NAME" x="62.5362" y="26.476" size="1.27" layer="26" rot="SMR180"/>
 </element>
 <element name="C17" library="rcl" package="C0805K" value="100n" x="61.1632" y="44.2214" smashed="yes">
 <attribute name="NAME" x="60.1124" y="45.2234" size="0.8128" layer="25" rot="SR0"/>
+<attribute name="OC_FARNELL" value="1740681" x="61.1632" y="44.2214" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="AVX" x="61.1632" y="44.2214" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="08051C104KAT2A" x="61.1632" y="44.2214" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C18" library="rcl" package="C0805K" value="100n" x="51.3842" y="45.7962" smashed="yes">
 <attribute name="NAME" x="50.3522" y="46.8262" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1740681" x="51.3842" y="45.7962" size="1.778" layer="27" display="off"/>
+<attribute name="MF" value="AVX" x="51.3842" y="45.7962" size="1.778" layer="27" display="off"/>
+<attribute name="MPN" value="08051C104KAT2A" x="51.3842" y="45.7962" size="1.778" layer="27" display="off"/>
 </element>
 <element name="C16" library="rcl" package="C0805K" value="100n" x="45.2374" y="40.3606" smashed="yes" rot="R90">
 <attribute name="NAME" x="46.3644" y="43.067" size="0.8128" layer="25" rot="R180"/>
+<attribute name="OC_FARNELL" value="1740681" x="45.2374" y="40.3606" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MF" value="AVX" x="45.2374" y="40.3606" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="08051C104KAT2A" x="45.2374" y="40.3606" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="+5V" library="led" package="CHIP-LED0805" value="" x="73.914" y="32.1564" smashed="yes" rot="MR180">
-<attribute name="NAME" x="74.8792" y="34.1884" size="0.8128" layer="26" rot="MR0"/>
+<attribute name="NAME" x="72.644" y="35.0012" size="0.8128" layer="26" rot="SMR180"/>
 <attribute name="VALUE" x="76.454" y="33.4264" size="1.27" layer="28" rot="MR270"/>
+<attribute name="OC_FARNELL" value="1716765" x="73.914" y="32.1564" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="73.914" y="32.1564" size="1.778" layer="28" rot="MR180" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="73.914" y="32.1564" size="1.778" layer="28" rot="MR180" display="off"/>
 </element>
 <element name="R27" library="rcl" package="R0805" value="1k" x="71.7804" y="32.2326" smashed="yes" rot="MR270">
 <attribute name="NAME" x="69.6214" y="31.369" size="0.8128" layer="26" rot="MR90"/>
+<attribute name="OC_FARNELL" value="2008389" x="71.7804" y="32.2326" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MF" value="BOURNS" x="71.7804" y="32.2326" size="1.778" layer="28" rot="MR270" display="off"/>
+<attribute name="MPN" value="CR0805-JW-102ELF" x="71.7804" y="32.2326" size="1.778" layer="28" rot="MR270" display="off"/>
 </element>
-<element name="U$1" library="MarcEagleParts" package="FCIM_LOGO" value="" x="82.776" y="35.3692" rot="MR0"/>
-<element name="U$2" library="MarcEagleParts" package="BCN3D_LOGO" value="" x="19.0288" y="24.5404" rot="MR0"/>
-<element name="U$3" library="SparkFun-Aesthetics" package="OSHW-LOGO-L" value="" x="81" y="-18"/>
+<element name="U$1" library="MarcEagleParts" package="FCIM_LOGO" value="" x="54.8412" y="46.1648" rot="MR180"/>
+<element name="U$2" library="MarcEagleParts" package="BCN3D_LOGO" value="" x="2.612" y="44.192" rot="SMR180"/>
+<element name="U$3" library="SparkFun-Aesthetics" package="OSHW-LOGO-L" value="" x="83.286" y="23.3004"/>
 <element name="C19" library="rcl" package="C0805K" value="100n" x="13.4112" y="39.1668" smashed="yes" rot="R270">
 <attribute name="NAME" x="12.4112" y="36.3842" size="0.8128" layer="25"/>
+<attribute name="OC_FARNELL" value="1740681" x="13.4112" y="39.1668" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="AVX" x="13.4112" y="39.1668" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="08051C104KAT2A" x="13.4112" y="39.1668" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 <element name="R25" library="rcl" package="R0805" value="5k6" x="79.5528" y="32.1564" smashed="yes" rot="MR90">
 <attribute name="NAME" x="80.8228" y="31.2166" size="0.8128" layer="26" rot="MR90"/>
+<attribute name="OC_FARNELL" value="2447693" x="79.5528" y="32.1564" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="79.5528" y="32.1564" size="1.778" layer="28" rot="MR90" display="off"/>
+<attribute name="MPN" value="MCWR08X5601FTL" x="79.5528" y="32.1564" size="1.778" layer="28" rot="MR90" display="off"/>
 </element>
 <element name="+24V" library="led" package="CHIP-LED0805" value="" x="77.2668" y="32.1564" smashed="yes" rot="MR0">
-<attribute name="NAME" x="78.5368" y="34.1884" size="0.8128" layer="26" rot="MR0"/>
+<attribute name="NAME" x="75.692" y="35.0012" size="0.8128" layer="26" rot="SMR180"/>
 <attribute name="VALUE" x="74.7268" y="30.8864" size="1.27" layer="28" rot="MR90"/>
+<attribute name="OC_FARNELL" value="1716765" x="77.2668" y="32.1564" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="MF" value="MULTICOMP" x="77.2668" y="32.1564" size="1.778" layer="28" rot="MR0" display="off"/>
+<attribute name="MPN" value="OVS-0803" x="77.2668" y="32.1564" size="1.778" layer="28" rot="MR0" display="off"/>
+</element>
+<element name="F1" library="SparkFun-PowerIC" package="PTC-1206-WIDE" value="PTCSMD-W" x="97.536" y="32.004" smashed="yes" rot="R270">
+<attribute name="NAME" x="96.266" y="31.6992" size="0.8128" layer="25" rot="R90"/>
+<attribute name="OC_FARNELL" value="1829472" x="97.536" y="32.004" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MF" value="SCHURTER" x="97.536" y="32.004" size="1.778" layer="27" rot="R270" display="off"/>
+<attribute name="MPN" value="3413.0329.22" x="97.536" y="32.004" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
 </elements>
 <signals>
@@ -7756,12 +8069,12 @@ design rules under a new name.</description>
 <via x="43.7388" y="44.6532" extent="1-16" drill="0.3048"/>
 <via x="43.1292" y="40.386" extent="1-16" drill="0.3048"/>
 <via x="43.1292" y="42.0624" extent="1-16" drill="0.3048"/>
-<via x="4.7244" y="29.718" extent="1-16" drill="0.3048"/>
-<via x="8.2296" y="29.718" extent="1-16" drill="0.3048"/>
-<via x="11.7348" y="29.718" extent="1-16" drill="0.3048"/>
-<via x="9.906" y="27.2796" extent="1-16" drill="0.3048"/>
-<via x="6.4008" y="27.2796" extent="1-16" drill="0.3048"/>
-<via x="3.2004" y="27.1272" extent="1-16" drill="0.3048"/>
+<via x="3.5052" y="30.1752" extent="1-16" drill="0.3048"/>
+<via x="11.7348" y="26.0604" extent="1-16" drill="0.3048"/>
+<via x="14.1732" y="26.2128" extent="1-16" drill="0.3048"/>
+<via x="4.572" y="28.194" extent="1-16" drill="0.3048"/>
+<via x="7.0104" y="26.2128" extent="1-16" drill="0.3048"/>
+<via x="4.2672" y="26.2128" extent="1-16" drill="0.3048"/>
 <via x="9.6012" y="20.2692" extent="1-16" drill="0.3048"/>
 <via x="10.668" y="20.2692" extent="1-16" drill="0.3048"/>
 <via x="11.7348" y="20.2692" extent="1-16" drill="0.3048"/>
@@ -7860,99 +8173,12 @@ design rules under a new name.</description>
 <wire x1="7.7724" y1="15.350575" x2="7.7724" y2="14.3256" width="0.6096" layer="1"/>
 </signal>
 <signal name="+24V">
-<contactref element="D1" pad="C"/>
-<contactref element="R1" pad="2"/>
-<contactref element="HOTEND1" pad="1"/>
-<contactref element="D2" pad="C"/>
-<contactref element="R5" pad="2"/>
-<contactref element="HOTEND2" pad="1"/>
-<contactref element="D3" pad="C"/>
-<contactref element="R9" pad="2"/>
-<contactref element="HOTEND3" pad="1"/>
-<contactref element="D4" pad="C"/>
-<contactref element="R13" pad="2"/>
-<contactref element="HOTEND4" pad="1"/>
-<contactref element="D5" pad="C"/>
-<contactref element="R17" pad="2"/>
-<contactref element="HOTEND5" pad="1"/>
-<contactref element="D6" pad="C"/>
-<contactref element="R21" pad="2"/>
-<contactref element="HOTEND6" pad="1"/>
-<contactref element="PC1" pad="3"/>
 <contactref element="PC1" pad="1"/>
 <contactref element="D7" pad="A"/>
-<wire x1="56.0832" y1="4.3932" x2="56.0376" y2="4.5" width="0.3048" layer="1"/>
-<wire x1="56.0324" y1="4.3528" x2="56.0376" y2="4.5" width="0.3048" layer="1"/>
-<wire x1="56.0832" y1="4.4544" x2="56.0376" y2="4.5" width="0.3048" layer="1"/>
-<polygon width="0.254" layer="1" thermals="no" rank="2">
-<vertex x="85.9536" y="33.7312"/>
-<vertex x="85.9536" y="40.8686" curve="-90"/>
-<vertex x="87.2236" y="42.1386"/>
-<vertex x="88.88895" y="42.1386" curve="-89.352589"/>
-<vertex x="90.15886875" y="40.88295"/>
-<vertex x="90.20653125" y="36.68865" curve="89.348924"/>
-<vertex x="91.47645" y="35.433"/>
-<vertex x="93.16505" y="35.433" curve="90.648821"/>
-<vertex x="94.43496875" y="36.71738125"/>
-<vertex x="94.38763125" y="40.93041875" curve="-90.643746"/>
-<vertex x="95.65755" y="42.2148"/>
-<vertex x="100.1644" y="42.2148"/>
-<vertex x="100.6112" y="11.8204"/>
-<vertex x="100.419025" y="1.159359375" curve="-88.723846"/>
-<vertex x="99.4234375" y="0.17744375"/>
-<vertex x="3.8862" y="-0.2286"/>
-<vertex x="3.8862" y="12.6586"/>
-<vertex x="6.6294" y="12.6586"/>
-<vertex x="6.6294" y="11.2108"/>
-<vertex x="8.9154" y="11.2108"/>
-<vertex x="8.9154" y="3.6764"/>
-<vertex x="17.540671875" y="3.6764" curve="90.474839"/>
-<vertex x="18.810628125" y="4.956925"/>
-<vertex x="18.7452" y="12.7348"/>
-<vertex x="21.1836" y="12.7348"/>
-<vertex x="21.1836" y="10.7536"/>
-<vertex x="23.7744" y="10.7536"/>
-<vertex x="23.6982" y="3.6764"/>
-<vertex x="34.084790625" y="3.7442875" curve="90.102335"/>
-<vertex x="35.346446875" y="5.02475625"/>
-<vertex x="35.2806" y="13.1158"/>
-<vertex x="37.719" y="13.1158"/>
-<vertex x="37.719" y="10.4488"/>
-<vertex x="40.2336" y="10.4488"/>
-<vertex x="40.2336" y="3.7526"/>
-<vertex x="51.1127125" y="3.7526" curve="90.788405"/>
-<vertex x="52.38259375" y="5.040075"/>
-<vertex x="52.2732" y="13.0396"/>
-<vertex x="54.9402" y="13.0396"/>
-<vertex x="55.0164" y="10.4488"/>
-<vertex x="57.15" y="10.4488"/>
-<vertex x="57.3024" y="3.6002"/>
-<vertex x="68.3084875" y="3.668559375" curve="89.645696"/>
-<vertex x="69.5706" y="4.938534375"/>
-<vertex x="69.5706" y="13.3444"/>
-<vertex x="72.2122" y="13.3444"/>
-<vertex x="72.2376" y="10.4488"/>
-<vertex x="73.3044" y="10.4488"/>
-<vertex x="73.3806" y="3.7526"/>
-<vertex x="82.44638125" y="3.685878125" curve="90.812619"/>
-<vertex x="83.725696875" y="4.964565625"/>
-<vertex x="83.6676" y="13.5636"/>
-<vertex x="87.0204" y="13.5636"/>
-<vertex x="87.0204" y="10.0584"/>
-<vertex x="87.3252" y="10.0584"/>
-<vertex x="87.3252" y="3.81"/>
-<vertex x="94.45016875" y="3.8827625" curve="89.416164"/>
-<vertex x="95.7072" y="5.152696875"/>
-<vertex x="95.7072" y="13.2588"/>
-<vertex x="95.5648" y="31.2012" curve="89.545323"/>
-<vertex x="94.294840625" y="32.4612"/>
-<vertex x="87.2236" y="32.4612" curve="-90"/>
-</polygon>
-<wire x1="88.0852" y1="40.3664" x2="88.0852" y2="42.0644" width="1.4224" layer="1"/>
-<wire x1="88.0852" y1="42.0644" x2="86.7156" y2="43.434" width="1.4224" layer="1"/>
-<wire x1="86.7156" y1="43.434" x2="82.296" y2="43.434" width="1.4224" layer="1"/>
-<wire x1="82.296" y1="43.434" x2="80.772" y2="41.91" width="1.4224" layer="1"/>
-<wire x1="80.772" y1="41.91" x2="80.772" y2="39.0144" width="1.4224" layer="1"/>
+<wire x1="88.0852" y1="42.0644" x2="86.7156" y2="43.434" width="1.27" layer="1"/>
+<wire x1="86.7156" y1="43.434" x2="82.296" y2="43.434" width="1.27" layer="1"/>
+<wire x1="82.296" y1="43.434" x2="80.772" y2="41.91" width="1.27" layer="1"/>
+<wire x1="80.772" y1="41.91" x2="80.772" y2="39.0144" width="1.27" layer="1"/>
 <contactref element="R25" pad="2"/>
 <via x="79.5528" y="34.7472" extent="1-16" drill="0.3048"/>
 <wire x1="79.5528" y1="34.7472" x2="79.5528" y2="33.1064" width="0.3048" layer="16"/>
@@ -7960,6 +8186,25 @@ design rules under a new name.</description>
 <wire x1="79.765" y1="38.0074" x2="77.9018" y2="38.0074" width="1.27" layer="1"/>
 <wire x1="79.5528" y1="34.7472" x2="79.5528" y2="38.0074" width="0.3556" layer="1"/>
 <wire x1="79.5528" y1="38.0074" x2="79.765" y2="38.0074" width="0.3556" layer="1"/>
+<contactref element="PC1" pad="3"/>
+<contactref element="F1" pad="1"/>
+<polygon width="0.254" layer="1" thermals="no">
+<vertex x="99.9744" y="32.4612"/>
+<vertex x="99.9744" y="40.0624" curve="90"/>
+<vertex x="97.9744" y="42.0624"/>
+<vertex x="96.3356" y="42.0624" curve="90"/>
+<vertex x="94.3356" y="40.0624"/>
+<vertex x="94.3356" y="37.5092" curve="-90"/>
+<vertex x="92.3356" y="35.5092"/>
+<vertex x="92.2208" y="35.5092" curve="-90"/>
+<vertex x="90.2208" y="37.5092"/>
+<vertex x="90.2208" y="40.2148" curve="90"/>
+<vertex x="88.2208" y="42.2148"/>
+<vertex x="88.106" y="42.2148" curve="90"/>
+<vertex x="86.106" y="40.2148"/>
+<vertex x="86.106" y="34.4612" curve="90"/>
+<vertex x="88.106" y="32.4612"/>
+</polygon>
 </signal>
 <signal name="N$3">
 <contactref element="R1" pad="1"/>
@@ -8983,21 +9228,94 @@ design rules under a new name.</description>
 <wire x1="79.5528" y1="31.2064" x2="79.4528" y2="31.1064" width="0.6096" layer="16"/>
 <wire x1="79.4528" y1="31.1064" x2="77.2668" y2="31.1064" width="0.6096" layer="16"/>
 </signal>
+<signal name="+24VHE">
+<contactref element="F1" pad="2"/>
+<contactref element="D1" pad="C"/>
+<contactref element="R1" pad="2"/>
+<contactref element="HOTEND1" pad="1"/>
+<contactref element="D2" pad="C"/>
+<contactref element="R5" pad="2"/>
+<contactref element="HOTEND2" pad="1"/>
+<contactref element="D3" pad="C"/>
+<contactref element="R9" pad="2"/>
+<contactref element="HOTEND3" pad="1"/>
+<contactref element="D4" pad="C"/>
+<contactref element="R13" pad="2"/>
+<contactref element="HOTEND4" pad="1"/>
+<wire x1="56.0832" y1="4.3932" x2="56.0376" y2="4.5" width="0.3048" layer="1"/>
+<wire x1="56.0324" y1="4.3528" x2="56.0376" y2="4.5" width="0.3048" layer="1"/>
+<wire x1="56.0832" y1="4.4544" x2="56.0376" y2="4.5" width="0.3048" layer="1"/>
+<contactref element="D5" pad="C"/>
+<contactref element="R17" pad="2"/>
+<contactref element="HOTEND5" pad="1"/>
+<contactref element="D6" pad="C"/>
+<contactref element="R21" pad="2"/>
+<contactref element="HOTEND6" pad="1"/>
+<polygon width="0.254" layer="1" thermals="no" rank="2">
+<vertex x="100.0016" y="31.6324"/>
+<vertex x="100.419025" y="1.159359375" curve="-88.723846"/>
+<vertex x="99.4234375" y="0.17744375"/>
+<vertex x="3.8862" y="-0.2286"/>
+<vertex x="3.8862" y="12.6586"/>
+<vertex x="6.6294" y="12.6586"/>
+<vertex x="6.6294" y="11.2108"/>
+<vertex x="8.9154" y="11.2108"/>
+<vertex x="8.9154" y="3.6764"/>
+<vertex x="17.540671875" y="3.6764" curve="90.474839"/>
+<vertex x="18.810628125" y="4.956925"/>
+<vertex x="18.7452" y="12.7348"/>
+<vertex x="21.1836" y="12.7348"/>
+<vertex x="21.1836" y="10.7536"/>
+<vertex x="23.7744" y="10.7536"/>
+<vertex x="23.6982" y="3.6764"/>
+<vertex x="34.084790625" y="3.7442875" curve="90.102335"/>
+<vertex x="35.346446875" y="5.02475625"/>
+<vertex x="35.2806" y="13.1158"/>
+<vertex x="37.719" y="13.1158"/>
+<vertex x="37.719" y="10.4488"/>
+<vertex x="40.2336" y="10.4488"/>
+<vertex x="40.2336" y="3.7526"/>
+<vertex x="51.1127125" y="3.7526" curve="90.788405"/>
+<vertex x="52.38259375" y="5.040075"/>
+<vertex x="52.2732" y="13.0396"/>
+<vertex x="54.9402" y="13.0396"/>
+<vertex x="55.0164" y="10.4488"/>
+<vertex x="57.15" y="10.4488"/>
+<vertex x="57.3024" y="3.6002"/>
+<vertex x="68.3084875" y="3.668559375" curve="89.645696"/>
+<vertex x="69.5706" y="4.938534375"/>
+<vertex x="69.5706" y="13.3444"/>
+<vertex x="72.2122" y="13.3444"/>
+<vertex x="72.2376" y="10.4488"/>
+<vertex x="73.3044" y="10.4488"/>
+<vertex x="73.3806" y="3.7526"/>
+<vertex x="82.44638125" y="3.685878125" curve="90.812619"/>
+<vertex x="83.725696875" y="4.964565625"/>
+<vertex x="83.6676" y="13.5636"/>
+<vertex x="87.0204" y="13.5636"/>
+<vertex x="87.0204" y="10.0584"/>
+<vertex x="87.3252" y="10.0584"/>
+<vertex x="87.3252" y="3.81"/>
+<vertex x="94.45016875" y="3.8827625" curve="89.416164"/>
+<vertex x="95.7072" y="5.152696875"/>
+<vertex x="95.5548" y="31.6992"/>
+</polygon>
+</signal>
 </signals>
 <errors>
-<approved hash="18,29,d64db480b480d64d"/>
 <approved hash="18,29,74160241ab41dd16"/>
+<approved hash="18,29,d64db480b480d64d"/>
 <approved hash="18,29,a80d01129cc2fb59"/>
-<approved hash="18,29,6a6e3a1a90fa208a"/>
 <approved hash="18,29,88790609b4c9dabd"/>
+<approved hash="18,29,6a6e3a1a90fa208a"/>
 <approved hash="18,29,a70110396588672d"/>
 <approved hash="18,29,8a08c6e141a46cc5"/>
 <approved hash="18,29,5370aa307c3d857d"/>
 <approved hash="18,29,8cec7feea8135b11"/>
 <approved hash="18,29,e0dbb225ed486635"/>
 <approved hash="18,29,1603461f32a56f2f"/>
-<approved hash="18,29,b38053e8e9088964"/>
 <approved hash="18,29,218b7fe7dd27034f"/>
+<approved hash="18,29,b38053e8e9088964"/>
 </errors>
 </board>
 </drawing>
