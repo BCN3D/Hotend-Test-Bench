@@ -10180,7 +10180,7 @@ Source: http://www.ctscorp.com/components/Datasheets/CTSChipArrayDs.pdf</descrip
 <attribute name="MPN" value="ATMEGA328-AU"/>
 <attribute name="OC_FARNELL" value="1972086"/>
 </part>
-<part name="Y1" library="SparkFun-FreqCtrl" deviceset="CRYSTAL" device="HC49US" value="20MHz">
+<part name="Y1" library="SparkFun-FreqCtrl" deviceset="CRYSTAL" device="HC49US" value="16MHz">
 <attribute name="MF" value="TXC"/>
 <attribute name="MPN" value="9B-20.000MAAJ-B"/>
 <attribute name="OC_FARNELL" value="1842224"/>
