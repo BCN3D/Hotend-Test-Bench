@@ -17,7 +17,6 @@ LED lights up, if not a red LED lights up.
 #define TEMPERATURENOMINAL 25
 #define THERMISTORNOMINAL 100000
 #define BCOEFFICIENT 3950
-#define UPDATEINTERVAL 500
 #define MAXTEMPERATURE 260
 #define MEANHEATINGTIME 90000	//Mean time that takes to heat the extruder 1,5min??
 
@@ -27,7 +26,6 @@ class hotend
 //Class Member Variables initialized at startup
 int heaterPin;					//Heater PWM Pin
 int thermistorPin;				//Thermistor pin
-unsigned long previousMillis;	//Last time Hotend updated
 unsigned long startTime, stopTime;
 int tempSamples[NUMSAMPLES];	//Array of temp samples
 
@@ -44,8 +42,7 @@ hotend(int therm,int heater) {
 	heaterPin = heater;
 	thermistorPin = therm;
 	pinMode(heaterPin, OUTPUT);
-	
-	previousMillis = 0;
+
 	startTime = millis();
 	stopTime = 0;
 	averageTemp = 0;
@@ -59,15 +56,22 @@ void readTemperature() {
 	//Get the samples
 	for (i = 0; i < NUMSAMPLES; i++)
 	{
-		tempSamples[i] = analogRead(thermistorPin);
-		delayMicroseconds(500);
+		tempSamples[i] = analogRead(thermistorPin);		
+		delayMicroseconds(1000);
 	}
 	//Average all the samples
+	averageTemp = 0;
 	for (i = 0; i < NUMSAMPLES;  i++)
 	{
 		averageTemp += tempSamples[i];
 	}
 	averageTemp = averageTemp / NUMSAMPLES;
+	//Convert the Analog value to resistance
+	averageTemp = 1023 / averageTemp - 1;
+	averageTemp = SERIESRESISTOR / averageTemp;
+	//Serial.print("Therm Resistance: ");
+	//Serial.println(averageTemp);
+	
 	//Convert to Celsius
 	tempCelsius = averageTemp / THERMISTORNOMINAL;		// (R/Ro)
 	tempCelsius = log(tempCelsius);						// ln(R/Ro)
@@ -75,11 +79,10 @@ void readTemperature() {
 	tempCelsius += 1.0 / (TEMPERATURENOMINAL + 273.15);	//+ (1/To)
 	tempCelsius = 1.0 / tempCelsius;					//Invert
 	tempCelsius -= 273.15;								//Convert to Celsius from Kelvin
-	
 }
 bool manageTime() {
 	stopTime = millis();
-	startTime += 2100;	//Add the 2 seconds delay and a margin
+	startTime += 1500;	//Add the 1.5 seconds delay and a margin
 	if (stopTime - startTime >= MEANHEATINGTIME*0.9 && stopTime- startTime <= MEANHEATINGTIME*1.1)
 	{
 		//Timing is correct so GREEN LED
@@ -91,28 +94,27 @@ bool manageTime() {
 	
 }
 
-void update(double output, uint8_t pos) {
-	unsigned long currentMillis = millis();
-	if (currentMillis - previousMillis >= UPDATEINTERVAL)
+void update(double output) {	
+	if (state == 0)	//Heating
 	{
-		previousMillis = currentMillis;
-		if (state = 0)	//Heating
+		//Serial.println("Heating...");
+		double gap = abs(MAXTEMPERATURE - tempCelsius);
+		if (gap < 2.0)
 		{
-			readTemperature();
-			double gap = abs(MAXTEMPERATURE - tempCelsius);
-			if (gap < 5)
-			{
-				//setTemperature Reached. Cooling state
-				state = 1;
-				//Manage time
-				hotendState = manageTime();
-			} else {
-				analogWrite(heaterPin, output);
-			}
-			
-		} else {		//Cooling
-			analogWrite(heaterPin, 0);
+			//Serial.println("Temperature Reached!");
+			//setTemperature Reached. Cooling state
+			state = 1;
+			//Manage time
+			hotendState = manageTime();
+		} else {
+			//Serial.print("Heating at: ");
+			//Serial.println(output);
+			analogWrite(heaterPin, output);
 		}
+			
+	} else {		//Cooling
+		//Serial.println("Cooling...");
+		analogWrite(heaterPin, 0);
 	}
 
 }

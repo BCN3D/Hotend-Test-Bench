@@ -20,15 +20,16 @@ So you should know what you are doing.
 #include "hotend.h"
 #include "PID_v1.h"
 //--------------------CONSTANTS-----------------------------------------
-#define MAXTEMPERATURE 260
+#define MAXTEMPERATURE 250
+#define UPDATEINTERVAL 500 //compute everything every half second
 
 const char* tempSensors[]= {"THERM0","THERM1","THERM2","THERM3","THERM4","THERM5"};
-#define THERM0 5
-#define THERM1 4
-#define THERM2 3
-#define THERM3 2
-#define THERM4 1
-#define THERM5 0
+#define THERM0 A5
+#define THERM1 A4
+#define THERM2 A3
+#define THERM3 A2
+#define THERM4 A1
+#define THERM5 A0
 
 #define HOTEND0 3 //PD3 TIMER2
 #define HOTEND1 5 //PD5 TIMER0
@@ -52,9 +53,10 @@ double kp = 1;
 double kd = 0.25;
 double ki = 0.05;
 //bytes for the shift Registers
-byte leds1 = 0;
-byte leds2 = 0;
+byte leds1;
+byte leds2;
 
+unsigned long previousMillis = 0;	//Last time Hotend updated
 
 //--------------------OBJECTS-------------------------------------------
 //---Let's declare de hotends objects
@@ -85,8 +87,14 @@ void setup()
   //Set the PWM frequency to 3906.25Hz on Timer 1 and 2
   setPwmFrequency(HOTEND0, 8); //Pins 3 and 11 are paired on timer 2 so only need to change one
   setPwmFrequency(HOTEND3, 8); //Pins 9 and 10 are paired on timer 1 so only need to change one
+  uint8_t j;
+  for (j=0; j<6; j++)
+  {
+	  hotends[j].readTemperature();
+  }
   
   setTemperature = MAXTEMPERATURE;
+  
   hotendPID1.SetMode(AUTOMATIC);
   hotendPID2.SetMode(AUTOMATIC);
   hotendPID3.SetMode(AUTOMATIC);
@@ -95,8 +103,11 @@ void setup()
   hotendPID6.SetMode(AUTOMATIC);
   
   Serial.begin(115200);
+  delay(500);
   Serial.println("Starting the Hotend Test Jig...");
-  delay(2000);
+  delay(500);
+  startLEDs();
+
   Serial.println("Checking connected hotends");
   checkConnectedHotends();
 }
@@ -104,18 +115,54 @@ void loop()
 {
 	uint8_t i;
 	commands();
-	for (i = 0; i < 6; i++)
+	unsigned long currentMillis = millis();
+	if (currentMillis - previousMillis >= UPDATEINTERVAL)
 	{
-		if (connectedHotends[i] == 1)	
+		previousMillis = currentMillis;
+		for (i=0 ; i<6; i++)
 		{
-			hotends[i].readTemperature();
-			PIDS[i].Compute();
-			hotends[i].update(output, i);
-			if (hotends[i].state == 1)
+			if (connectedHotends[i] == 1)	
 			{
-				manageLEDs(hotends[i].hotendState, i);
+				hotends[i].readTemperature();
+			
+				//Serial.print("Hotend ");
+				//Serial.print(i+1);
+				//Serial.print(":	");
+				//Serial.println(hotends[i].tempCelsius);
+								
+				switch (i) {
+					case 0:
+						hotendPID1.Compute();
+					break;
+					case 1:
+						hotendPID2.Compute();
+					break;
+					case 2:
+						hotendPID3.Compute();
+					break;
+					case 3:
+						hotendPID4.Compute();
+					break;
+					case 4:
+						hotendPID5.Compute();
+					break;
+					case 5:
+						hotendPID6.Compute();
+					break;
+					default:
+						//Do nothing
+					break;
+				}
+				
+				hotends[i].update(output);
+				
+				if (hotends[i].state == 1)
+				{
+					manageLEDs(hotends[i].hotendState, i);
+				}
 			}
 		}
+		printTemperatures();
 	}
 }
 //--------------------USER FUNCTIONS----------------------
@@ -154,7 +201,7 @@ void checkConnectedHotends() {
 	for (i = 0; i<= 5; i++)
 	{
 		hotends[i].readTemperature();
-		if (hotends[i].averageTemp >= 1000) 
+		if (hotends[i].averageTemp >= 200000)		//Remember that averageTemp is Resistance in Ohms 
 		{
 			//Hotend i not connected
 			connectedHotends[i] = 0;
@@ -170,7 +217,57 @@ void checkConnectedHotends() {
 		}
 	}
 }
+void printTemperatures()
+{
+	int j;
+	for (j=0; j<6; j++)
+	{
+		Serial.print(hotends[j].tempCelsius);
+		if (j < 5)
+		{
+			Serial.print(",");
+		} 
+	}
+	Serial.print("\n");
+}
+void updateSR() {	//Update LED shift registers
+	digitalWrite(LATCH, LOW);
+	shiftOut(DATA, CLOCK, LSBFIRST, leds2);
+	shiftOut(DATA, CLOCK, LSBFIRST, leds1);
+	digitalWrite(LATCH, HIGH);
+}
+void startLEDs() {
+	Serial.println("Turning on all the LEDS!");
+	leds1 = 0x00;
+	leds2 = 0x00;
+	uint8_t i;
+	for (i=0; i<8; i++ )
+	{
+		bitSet(leds1, i);
+		delay(150);
+		updateSR();
+	}
+	for (i=4; i<8; i++)
+	{
+		bitSet(leds2, i);
+		delay(150);
+		updateSR();
+	}
+	for (i=0; i<6; i++)
+	{
+		leds1 = 0xFF;
+		leds2 = 0xFF;
+		updateSR();
+		delay(100);
+		leds1 = 0x00;
+		leds2 = 0x00;
+		updateSR();
+		delay(100); 
+	}
+}
 void manageLEDs(bool status, uint8_t pos) {
+	leds1 = 0x00;
+	leds2 = 0x00;
 	//Manage the leds throught the Shift Registers
 	if (status)
 	{
@@ -190,10 +287,7 @@ void manageLEDs(bool status, uint8_t pos) {
 			bitSet(leds2, 2*pos - 4);
 		}
 	}
-	digitalWrite(LATCH, LOW);
-	shiftOut(DATA, CLOCK, LSBFIRST, leds2);
-	shiftOut(DATA, CLOCK, LSBFIRST, leds1);
-	digitalWrite(LATCH, HIGH);
+	updateSR();	
 }
 void setPIDtunings(double Kp, double Ki, double Kd) {
 	kp = Kp;
