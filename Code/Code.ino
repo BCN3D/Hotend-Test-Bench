@@ -21,6 +21,7 @@ So you should know what you are doing.
 #include "PID_v1.h"
 //--------------------CONSTANTS-----------------------------------------
 #define MAXTEMPERATURE 250
+#define SECURITYTEMPERATURE 50
 #define UPDATEINTERVAL 500 //compute everything every half second
 
 const char* tempSensors[]= {"THERM0","THERM1","THERM2","THERM3","THERM4","THERM5"};
@@ -152,16 +153,20 @@ void loop()
 						//Do nothing
 					break;
 				}
-			}
-			hotends[i].update(output);
-			if (hotends[i].state == 1)					//Heating done. Temperature Reached
-			{
-				manageLEDs(hotends[i].hotendState, i);
-			} else if (hotends[i].state == 0) {			//Temperature not reached. Blinking...
-				if (hotends[i].gap < 2.0 || hotends[i].tempCelsius < MAXTEMPERATURE && connectedHotends[i] == 1)
-				{	
-					blinkLeds(i);
-				}
+				hotends[i].update(output);
+			} //End if connected hotends
+				if (hotends[i].state == 1)	//Heating done. Temperature Reached
+				{
+					manageLEDs(hotends[i].hotendState, i);
+					if (hotends[i].tempCelsius <= SECURITYTEMPERATURE && connectedHotends[i] == 1)
+					{
+						securityBlink(i);
+					}
+				} else {					//Temperature not reached. Blinking...
+					if (connectedHotends[i] == 1)
+					{	
+						blinkLeds(i);
+					}
 			}
 		} //for end
 		printTemperatures();
@@ -322,6 +327,24 @@ void blinkLeds(int i) {
 			bitClear(leds2,i*2 + 1 - 4);
 			updateSR();
 		}
+}
+void securityBlink(int i) {
+	//This functions blinks the hotend LEDs to know that it is cold enough to hold it
+	if (i < 4){
+		bitSet(leds1,i*2);
+		updateSR();
+		} else {
+		bitSet(leds2,i*2-4);
+		updateSR();
+	}
+	delay(100);
+	if (i < 4){
+		bitClear(leds1,i*2);
+		updateSR();
+		} else {
+		bitClear(leds2,i*2 -4);
+		updateSR();
+	}
 }
 void setPIDtunings(double Kp, double Ki, double Kd) {
 	kp = Kp;
