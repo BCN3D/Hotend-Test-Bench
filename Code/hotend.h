@@ -18,7 +18,7 @@ LED lights up, if not a red LED lights up.
 #define THERMISTORNOMINAL 100000
 #define BCOEFFICIENT 3950
 #define MAXTEMPERATURE 260
-#define MEANHEATINGTIME 90000	//Mean time that takes to heat the extruder 1,5min??
+#define MEANHEATINGTIME 72500	//Mean time that takes to heat the extruder
 
 
 class hotend
@@ -33,6 +33,7 @@ int tempSamples[NUMSAMPLES];	//Array of temp samples
 //Constructor of the class - Creates a Hotend
 //Initializes the member variables and state
 public:
+double gap;
 bool state;
 double averageTemp;				//Average Temp calculated from samples
 double tempCelsius;				//Degrees celsius value
@@ -82,8 +83,8 @@ void readTemperature() {
 }
 bool manageTime() {
 	stopTime = millis();
-	startTime += 1500;	//Add the 1.5 seconds delay and a margin
-	if (stopTime - startTime >= MEANHEATINGTIME*0.9 && stopTime- startTime <= MEANHEATINGTIME*1.1)
+	startTime += 500;	//Add the 0.5 seconds delay and a margin
+	if ((stopTime - startTime) >= MEANHEATINGTIME*0.9 && (stopTime- startTime) <= MEANHEATINGTIME*1.1)
 	{
 		//Timing is correct so GREEN LED
 		return true;
@@ -98,8 +99,8 @@ void update(double output) {
 	if (state == 0)	//Heating
 	{
 		//Serial.println("Heating...");
-		double gap = abs(MAXTEMPERATURE - tempCelsius);
-		if (gap < 2.0)
+		gap = abs(MAXTEMPERATURE - tempCelsius);
+		if (gap < 2.0 || tempCelsius > MAXTEMPERATURE)
 		{
 			//Serial.println("Temperature Reached!");
 			//setTemperature Reached. Cooling state

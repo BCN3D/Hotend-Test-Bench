@@ -110,6 +110,7 @@ void setup()
 
   Serial.println("Checking connected hotends");
   checkConnectedHotends();
+  Serial.println("start");
 }
 void loop()
 {
@@ -124,12 +125,10 @@ void loop()
 			if (connectedHotends[i] == 1)	
 			{
 				hotends[i].readTemperature();
-			
 				//Serial.print("Hotend ");
 				//Serial.print(i+1);
 				//Serial.print(":	");
-				//Serial.println(hotends[i].tempCelsius);
-								
+				//Serial.println(hotends[i].tempCelsius);		
 				switch (i) {
 					case 0:
 						hotendPID1.Compute();
@@ -153,18 +152,21 @@ void loop()
 						//Do nothing
 					break;
 				}
-				
-				hotends[i].update(output);
-				
-				if (hotends[i].state == 1)
-				{
-					manageLEDs(hotends[i].hotendState, i);
+			}
+			hotends[i].update(output);
+			if (hotends[i].state == 1)					//Heating done. Temperature Reached
+			{
+				manageLEDs(hotends[i].hotendState, i);
+			} else if (hotends[i].state == 0) {			//Temperature not reached. Blinking...
+				if (hotends[i].gap < 2.0 || hotends[i].tempCelsius < MAXTEMPERATURE && connectedHotends[i] == 1)
+				{	
+					blinkLeds(i);
 				}
 			}
-		}
+		} //for end
 		printTemperatures();
-	}
-}
+	} //update interval end
+} //loop end
 //--------------------USER FUNCTIONS----------------------
 void setPwmFrequency(int pin, int divisor) {
 	byte mode;
@@ -266,10 +268,10 @@ void startLEDs() {
 	}
 }
 void manageLEDs(bool status, uint8_t pos) {
-	leds1 = 0x00;
-	leds2 = 0x00;
+	//leds1 = 0x00;
+	//leds2 = 0x00;
 	//Manage the leds throught the Shift Registers
-	if (status)
+	if (status)		//Correct timing
 	{
 		//Green LED must be turned on
 		if (pos < 4)
@@ -288,6 +290,38 @@ void manageLEDs(bool status, uint8_t pos) {
 		}
 	}
 	updateSR();	
+}
+void blinkLeds(int i) {
+	//This functions blinks the hotend LEDs to know that it is heating up
+		//Serial.println("on Leds");
+		
+		if (i < 4){
+			bitSet(leds1,i*2);
+			updateSR();
+			delay(50);
+			bitSet(leds1,i*2 + 1);
+			updateSR();
+		} else {
+			bitSet(leds2,i*2-4);
+			updateSR();
+			delay(50);
+			bitSet(leds2,i*2 + 1 - 4);
+			updateSR();
+		}
+		//Serial.println("off Leds");
+		if (i < 4){
+			bitClear(leds1,i*2);
+			updateSR();
+			delay(50);
+			bitClear(leds1,i*2 + 1);
+			updateSR();
+		} else {
+			bitClear(leds2,i*2 -4);
+			updateSR();
+			delay(50);
+			bitClear(leds2,i*2 + 1 - 4);
+			updateSR();
+		}
 }
 void setPIDtunings(double Kp, double Ki, double Kd) {
 	kp = Kp;
