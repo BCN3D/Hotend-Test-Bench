@@ -9,7 +9,8 @@ Serial SerialPort;    //The serial port
 //Variables
 //Config this to connect to the board. COM ports and baudrate
 int baudrate = 115200;
-String COMPORT = "COM51";
+String selectedCOMPORT;
+String[] serialPorts = new String[20];
 int MAXTEMPERATURE = 300;
 int TARGETTEMPERATURE = 250;
 
@@ -22,6 +23,10 @@ int incrementXPosition = 2;
 int axisDivisions = 29;
 int axisDivisionLenght = 3;
 int temperatureIncrementAxis = MAXTEMPERATURE / (axisDivisions + 1); 
+int comPortBoxSizeX = 250;
+int comPortBoxSizeY = 50;
+int comPortTextSize = 18;
+int comPortOffsetY = 50;
 
 int[] lastxPos = {graphMargin, graphMargin, graphMargin, graphMargin, graphMargin, graphMargin};
 int[] lastheight = {600, 600, 600, 600, 600, 600};
@@ -29,7 +34,6 @@ int[] xPos = {graphMargin, graphMargin, graphMargin, graphMargin, graphMargin, g
 String inString;
 float[] temperatureList = new float[6];
 int[] mappedTemperatures = new int[6];
-
 int startTime, finishTime, heatingTime;
 
 //Colors. Every hotendhas a color to differentiate it
@@ -41,47 +45,59 @@ color hotend5 = color(255,0,0);
 color hotend6 = color(0,0,255);
 color[] colors = {hotend1, hotend2, hotend3, hotend4, hotend5, hotend6};
 
+//Variables used for the diferents screens
+int screen = 0;
 
 void setup() {
   //set the window size
   size(800,700);
- 
-  //Draw the main screen with the graph
-  textAlign(LEFT,BOTTOM);
-  drawGraph();
   
   //print the available serial ports
   printArray(Serial.list());
   // Check the listed serial ports in your machine
   // and use the correct index number in Serial.list()[].
-  SerialPort = new Serial(this, COMPORT, baudrate);  //
+  
+  //SerialPort = new Serial(this, selectedCOMPORT, baudrate);  //
   
   // A serialEvent() is generated when a newline character is received :
-  SerialPort.bufferUntil('\n');
+  //SerialPort.bufferUntil('\n');
+
 }
 
 void draw() {
-   //Drawing a line from Last temperature to the new one.  
-   strokeWeight(1.10);        //stroke wider
-   int i;
-   for (i=0; i<6; i++) 
-   {
-     if (temperatureList[i] <= 0)  //Hotend not connected. Negative Temperature
-      {
-      } else {
-       stroke(colors[i]);
-       line(lastxPos[i], lastheight[i], xPos[i], mappedTemperatures[i]); 
-      }
-   }
-   noStroke();
-   //Draw a white rectangle to delete the text
-   fill(255);
-   rect(525,625,100,20);
-   fill(0);
-   textSize(12);
-   text("Time: " + millis()/1000.0 + " s",525,620,100,20); 
-   
-   printTemperaturesLegend();
+  
+  switch (screen) {
+    
+    case 0:    //Serial Port menu
+    selectCOMPORT();    
+    break;
+    
+    case 1:    //Main graph screen
+       //Draw the main screen with the graph
+       textAlign(LEFT,BOTTOM);
+       drawGraph();
+       //Drawing a line from Last temperature to the new one.  
+       strokeWeight(1.10);        //stroke wider
+       int i;
+       for (i=0; i<6; i++) 
+       {
+         if (temperatureList[i] <= 0)  //Hotend not connected. Negative Temperature
+          {
+          } else {
+           stroke(colors[i]);
+           line(lastxPos[i], lastheight[i], xPos[i], mappedTemperatures[i]); 
+          }
+       }
+       noStroke();
+       //Draw a white rectangle to delete the text
+       fill(255);
+       rect(525,625,100,20);
+       fill(0);
+       textSize(12);
+       text("Time: " + millis()/1000.0 + " s",525,620,100,20); 
+       
+       printTemperaturesLegend();
+  }
 }
 
 
@@ -98,6 +114,41 @@ void addToArray(int[] a, int v) {
     for (i = 0; i < n; i++) {
        a[i] += v; 
     }
+}
+
+void selectCOMPORT() {
+  //This function prints a simple menu and lets you select the comport
+  background(255);
+  rectMode(CENTER);
+  textAlign(CENTER,CENTER);
+  textSize(26);
+  fill(0);
+  text("Select the communication Port:", sizeX/2, sizeY/5, 400, 100);
+  
+  //Save the Serial Ports available
+  serialPorts = Serial.list();
+  
+  textSize(comPortTextSize);
+  int i;
+  for (i = 0; i< serialPorts.length; i++) {
+    text(serialPorts[i], sizeX/2, sizeY/5 + comPortOffsetY + i * comPortOffsetY, comPortBoxSizeX, comPortBoxSizeY);
+  }
+  
+}
+
+void mousePressed() {
+  int option;
+  if (screen == 0) {  //Select COM Port Screen
+    if ( mouseX >= (sizeX/2 - comPortBoxSizeX/2) && mouseX <= (sizeX/2 + comPortBoxSizeX/2) ) {
+      option = floor((mouseY - sizeY/5 + comPortOffsetY/2) / comPortBoxSizeY);
+      println(option);
+      if (option <= serialPorts.length && option >= 0) {
+        selectedCOMPORT = serialPorts[option-1];
+        //Next Screen - Graph
+        screen = 1;
+      }
+    }
+  }
 }
 
 void drawGraph() {
