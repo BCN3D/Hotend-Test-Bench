@@ -83,8 +83,8 @@ void readTemperature() {
 }
 bool manageTime() {
 	stopTime = millis();
-	startTime += 500;	//Add the 0.5 seconds delay and a margin
-	if ((stopTime - startTime) >= MEANHEATINGTIME*0.9 && (stopTime- startTime) <= MEANHEATINGTIME*1.1)
+	startTime += 250;	//Add the 0.25 seconds delay and a margin
+	if ((stopTime - startTime) >= MEANHEATINGTIME*0.85 && (stopTime- startTime) <= MEANHEATINGTIME*1.15)
 	{
 		//Timing is correct so GREEN LED
 		return true;

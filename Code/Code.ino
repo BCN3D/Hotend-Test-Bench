@@ -21,8 +21,9 @@ So you should know what you are doing.
 #include "PID_v1.h"
 //--------------------CONSTANTS-----------------------------------------
 #define MAXTEMPERATURE 250
+#define MINTEMPERATURE 0
 #define SECURITYTEMPERATURE 50
-#define UPDATEINTERVAL 500 //compute everything every half second
+#define UPDATEINTERVAL 250 //compute everything every half second
 
 const char* tempSensors[]= {"THERM0","THERM1","THERM2","THERM3","THERM4","THERM5"};
 #define THERM0 A5
@@ -47,12 +48,13 @@ const char* tempSensors[]= {"THERM0","THERM1","THERM2","THERM3","THERM4","THERM5
 bool connectedHotends[6]= {0,0,0,0,0,0}; //Array of boolean. Indicates hotends connected
 String command;
 //PID Variables
-double output;
+double inputs[6];
+double outputs[6];
 double setTemperature;
 //PID Settings
-double kp = 1;
-double kd = 0.25;
-double ki = 0.05;
+double kp = 15.16;
+double kd = 49.38;
+double ki = 1.16;
 //bytes for the shift Registers
 byte leds1;
 byte leds2;
@@ -68,12 +70,12 @@ hotend h4(THERM3, HOTEND3);
 hotend h5(THERM4, HOTEND4);
 hotend h6(THERM5, HOTEND5);
 
-PID hotendPID1(&h1.tempCelsius, &output, &setTemperature, kp, ki, kd, DIRECT);
-PID hotendPID2(&h2.tempCelsius, &output, &setTemperature, kp, ki, kd, DIRECT);
-PID hotendPID3(&h3.tempCelsius, &output, &setTemperature, kp, ki, kd, DIRECT);
-PID hotendPID4(&h4.tempCelsius, &output, &setTemperature, kp, ki, kd, DIRECT);
-PID hotendPID5(&h5.tempCelsius, &output, &setTemperature, kp, ki, kd, DIRECT);
-PID hotendPID6(&h6.tempCelsius, &output, &setTemperature, kp, ki, kd, DIRECT);
+PID hotendPID1(&inputs[0], &outputs[0], &setTemperature, kp, ki, kd, DIRECT);
+PID hotendPID2(&inputs[1], &outputs[1], &setTemperature, kp, ki, kd, DIRECT);
+PID hotendPID3(&inputs[2], &outputs[2], &setTemperature, kp, ki, kd, DIRECT);
+PID hotendPID4(&inputs[3], &outputs[3], &setTemperature, kp, ki, kd, DIRECT);
+PID hotendPID5(&inputs[4], &outputs[4], &setTemperature, kp, ki, kd, DIRECT);
+PID hotendPID6(&inputs[5], &outputs[5], &setTemperature, kp, ki, kd, DIRECT);
 
 hotend hotends[] = {h1,h2,h3,h4,h5,h6};
 PID PIDS[] = {hotendPID1, hotendPID2, hotendPID3, hotendPID4, hotendPID5, hotendPID6};
@@ -92,6 +94,7 @@ void setup()
   for (j=0; j<6; j++)
   {
 	  hotends[j].readTemperature();
+	  inputs[j] = hotends[j].tempCelsius;
   }
   
   setTemperature = MAXTEMPERATURE;
@@ -104,9 +107,9 @@ void setup()
   hotendPID6.SetMode(AUTOMATIC);
   
   Serial.begin(115200);
-  delay(500);
+  delay(100);
   Serial.println("Starting the Hotend Test Jig...");
-  delay(500);
+  delay(250);
   startLEDs();
 
   Serial.println("Checking connected hotends");
@@ -126,6 +129,7 @@ void loop()
 			if (connectedHotends[i] == 1)	
 			{
 				hotends[i].readTemperature();
+				inputs[i] = hotends[i].tempCelsius;
 				//Serial.print("Hotend ");
 				//Serial.print(i+1);
 				//Serial.print(":	");
@@ -153,12 +157,12 @@ void loop()
 						//Do nothing
 					break;
 				}
-				hotends[i].update(output);
+				hotends[i].update(outputs[i]);
 			} //End if connected hotends
 				if (hotends[i].state == 1)	//Heating done. Temperature Reached
 				{
 					manageLEDs(hotends[i].hotendState, i);
-					if (hotends[i].tempCelsius <= SECURITYTEMPERATURE && connectedHotends[i] == 1)
+					if (hotends[i].tempCelsius <= SECURITYTEMPERATURE && hotends[i].tempCelsius > MINTEMPERATURE && connectedHotends[i] == 1)
 					{
 						securityBlink(i);
 					}
@@ -208,7 +212,7 @@ void checkConnectedHotends() {
 	for (i = 0; i<= 5; i++)
 	{
 		hotends[i].readTemperature();
-		if (hotends[i].averageTemp >= 200000)		//Remember that averageTemp is Resistance in Ohms 
+		if (hotends[i].tempCelsius <= MINTEMPERATURE)		//Remember that averageTemp is Resistance in Ohms 
 		{
 			//Hotend i not connected
 			connectedHotends[i] = 0;
