@@ -47,20 +47,26 @@ color[] colors = {hotend1, hotend2, hotend3, hotend4, hotend5, hotend6};
 
 //Variables used for the diferents screens
 int screen = 0;
+//Image Values
+int wheelOriginX = 210;
+int wheelOriginY = 112;
+int wheelSize = 295;
+int offset;
+PImage logo;
+PImage wheel;
 
 void setup() {
   //set the window size
   size(800,700);
+  background(255);
+  //Load and process the logo to make it turn
+  logo = loadImage("logo.jpg");
+  wheel = logo.get(wheelOriginX, wheelOriginY, wheelSize, wheelSize);
+  offset = (logo.height/2) - wheelOriginY - (wheel.height/2);
   
-  //print the available serial ports
-  printArray(Serial.list());
-  // Check the listed serial ports in your machine
-  // and use the correct index number in Serial.list()[].
+  //Save the Serial Ports available
+  serialPorts = Serial.list();
   
-  //SerialPort = new Serial(this, selectedCOMPORT, baudrate);  //
-  
-  // A serialEvent() is generated when a newline character is received :
-  //SerialPort.bufferUntil('\n');
 
 }
 
@@ -68,11 +74,15 @@ void draw() {
   
   switch (screen) {
     
-    case 0:    //Serial Port menu
+    case 0:
+    splashScreen();
+    break;
+    
+    case 1:    //Serial Port menu
     selectCOMPORT();    
     break;
     
-    case 1:    //Main graph screen
+    case 2:    //Main graph screen
        //Draw the main screen with the graph
        drawGraph();
        //Drawing a line from Last temperature to the new one.  
@@ -115,8 +125,28 @@ void addToArray(int[] a, int v) {
     }
 }
 
+void splashScreen() {
+  //Load the image first  
+  imageMode(CENTER);
+  background(255);
+  if (millis() < 5000) {
+    image(logo, sizeX/2, sizeY/2, logo.width/2, logo.height/2);
+    translate(width/2, height/2-offset);
+    rotate(10*TWO_PI/millis());
+    image(wheel, 0, 0,wheel.width/2, wheel.height/2);
+    
+  } else {
+    screen = 1;  
+  }
+}
+
 void selectCOMPORT() {
   //This function prints a simple menu and lets you select the comport
+  //print the available serial ports
+  printArray(Serial.list());
+  // Check the listed serial ports in your machine
+  // and use the correct index number in Serial.list()[].
+
   background(255);
   rectMode(CENTER);
   textAlign(CENTER,CENTER);
@@ -124,9 +154,7 @@ void selectCOMPORT() {
   fill(0);
   text("Select the communication Port:", sizeX/2, sizeY/5, 400, 100);
   
-  //Save the Serial Ports available
-  serialPorts = Serial.list();
-  
+
   textSize(comPortTextSize);
   int i;
   for (i = 0; i< serialPorts.length; i++) {
@@ -137,14 +165,18 @@ void selectCOMPORT() {
 
 void mousePressed() {
   int option;
-  if (screen == 0) {  //Select COM Port Screen
+  if (screen == 1) {  //Select COM Port Screen
     if ( mouseX >= (sizeX/2 - comPortBoxSizeX/2) && mouseX <= (sizeX/2 + comPortBoxSizeX/2) ) {
       option = floor((mouseY - sizeY/5 + comPortOffsetY/2) / comPortBoxSizeY);
       println(option);
       if (option <= serialPorts.length && option >= 0) {
         selectedCOMPORT = serialPorts[option-1];
+        SerialPort = new Serial(this, selectedCOMPORT, baudrate);
+        // A serialEvent() is generated when a newline character is received :
+        SerialPort.bufferUntil('\n');
+  
         //Next Screen - Graph
-        screen = 1;
+        screen = 2;
       }
     }
   }
