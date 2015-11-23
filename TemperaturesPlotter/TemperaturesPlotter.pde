@@ -1,18 +1,27 @@
+//BCN3D Technologies - Fundacio CIM 
+//Marc Cobler Cosmen - November 2015
+//Temperatures Plotter. Part of the Hotend Test Jig
+//Processing program that reads from a serial port the temperatures of 6 hotends at a time
+//and plots them in order to verify the manufacturing and the resistance and thermistor value
 
+//Any suggestions contact me directly at mcobler@fundaciocim.org
+//This program is exported to windows and can run by itself without processing being installed.
 
 //libraries used
-//import java.lang.reflect.Array;
 import processing.serial.*;
 
-Serial SerialPort;    //The serial port
 
+//****************************************************************************************
 //Variables
 //Config this to connect to the board. COM ports and baudrate
 int baudrate = 115200;
 String selectedCOMPORT;
 String[] serialPorts = new String[20];
+//this values are fixed by firmware. There are needed to show the graph correctly
 int MAXTEMPERATURE = 300;
 int TARGETTEMPERATURE = 250;
+//****************************************************************************************
+Serial SerialPort;    //The serial port
 
 int graphMargin = 40;
 int sizeX = 800;
@@ -27,6 +36,10 @@ int comPortBoxSizeX = 250;
 int comPortBoxSizeY = 50;
 int comPortTextSize = 18;
 int comPortOffsetY = 50;
+
+String author = "Marc Cobler";
+String title = "Temperature Plotter";
+String subtitle = "Hotend Test Jig";
 
 int[] lastxPos = {graphMargin, graphMargin, graphMargin, graphMargin, graphMargin, graphMargin};
 int[] lastheight = {600, 600, 600, 600, 600, 600};
@@ -47,11 +60,12 @@ color[] colors = {hotend1, hotend2, hotend3, hotend4, hotend5, hotend6};
 
 //Variables used for the diferents screens
 int screen = 0;
+int splashScreenTime = 4000;
 //Image Values
-int wheelOriginX = 210;
-int wheelOriginY = 112;
-int wheelSize = 295;
-int offset;
+int wheelOriginX = 212;
+int wheelOriginY = 114;
+int wheelSize = 291;
+int wheelOffset;
 PImage logo;
 PImage wheel;
 
@@ -62,12 +76,14 @@ void setup() {
   //Load and process the logo to make it turn
   logo = loadImage("logo.jpg");
   wheel = logo.get(wheelOriginX, wheelOriginY, wheelSize, wheelSize);
-  offset = (logo.height/2) - wheelOriginY - (wheel.height/2);
+  //It should be 75px but don't know yet why
+  wheelOffset = logo.height/2 - (wheelOriginY + wheelSize/2);
   
+  //print the available serial ports
+  printArray(Serial.list());  
   //Save the Serial Ports available
   serialPorts = Serial.list();
   
-
 }
 
 void draw() {
@@ -83,8 +99,6 @@ void draw() {
     break;
     
     case 2:    //Main graph screen
-       //Draw the main screen with the graph
-       drawGraph();
        //Drawing a line from Last temperature to the new one.  
        strokeWeight(1.10);        //stroke wider
        int i;
@@ -97,14 +111,7 @@ void draw() {
            line(lastxPos[i], lastheight[i], xPos[i], mappedTemperatures[i]); 
           }
        }
-       noStroke();
-       //Draw a white rectangle to delete the text
-       fill(255);
-       rect(525,625,100,20);
-       fill(0);
-       textSize(12);
-       text("Time: " + millis()/1000.0 + " s",525,620,100,20); 
-       
+       printTime();
        printTemperaturesLegend();
   }
 }
@@ -126,27 +133,32 @@ void addToArray(int[] a, int v) {
 }
 
 void splashScreen() {
-  //Load the image first  
-  imageMode(CENTER);
   background(255);
-  if (millis() < 5000) {
+  
+  rectMode(CENTER);
+  textAlign(CENTER,CENTER);
+  textSize(26);
+  fill(0);
+  text(title, sizeX/2, sizeY/6, 400, 100);
+  text(subtitle, sizeX/2, sizeY/1.20, 400, 100);
+  textSize(15);
+  text("by " + author, sizeX/2, sizeY/1.1, 400, 100);
+  
+  imageMode(CENTER);
+  if (millis() < splashScreenTime) {
     image(logo, sizeX/2, sizeY/2, logo.width/2, logo.height/2);
-    translate(width/2, height/2-offset);
-    rotate(10*TWO_PI/millis());
+    translate(width/2, height/2- 75);
+    rotate(100*TWO_PI/millis());
     image(wheel, 0, 0,wheel.width/2, wheel.height/2);
-    
   } else {
     screen = 1;  
   }
 }
 
+//This function prints a simple menu and lets you select the COM Port
 void selectCOMPORT() {
-  //This function prints a simple menu and lets you select the comport
-  //print the available serial ports
-  printArray(Serial.list());
   // Check the listed serial ports in your machine
   // and use the correct index number in Serial.list()[].
-
   background(255);
   rectMode(CENTER);
   textAlign(CENTER,CENTER);
@@ -154,7 +166,6 @@ void selectCOMPORT() {
   fill(0);
   text("Select the communication Port:", sizeX/2, sizeY/5, 400, 100);
   
-
   textSize(comPortTextSize);
   int i;
   for (i = 0; i< serialPorts.length; i++) {
@@ -168,7 +179,7 @@ void mousePressed() {
   if (screen == 1) {  //Select COM Port Screen
     if ( mouseX >= (sizeX/2 - comPortBoxSizeX/2) && mouseX <= (sizeX/2 + comPortBoxSizeX/2) ) {
       option = floor((mouseY - sizeY/5 + comPortOffsetY/2) / comPortBoxSizeY);
-      println(option);
+      println(option-1);
       if (option <= serialPorts.length && option >= 0) {
         selectedCOMPORT = serialPorts[option-1];
         SerialPort = new Serial(this, selectedCOMPORT, baudrate);
@@ -177,6 +188,8 @@ void mousePressed() {
   
         //Next Screen - Graph
         screen = 2;
+        //Draw the graph only one time! if not, the lines will become points
+        drawGraph();
       }
     }
   }
@@ -184,6 +197,11 @@ void mousePressed() {
 
 void drawGraph() {
   int i;
+  
+  String s = "The Target Temperature is " + TARGETTEMPERATURE + "ºC";
+  fill(0);
+  text(s, 320, 15, 200, 20);  // Text wraps within text box
+  
   //set the rectangle for the graph
   rectMode(CORNER);
   textAlign(LEFT,BOTTOM);
@@ -191,10 +209,9 @@ void drawGraph() {
   fill(255);
   stroke(0);
   rect(graphMargin,graphMargin,graphSpaceX, graphSpaceY);
-  String s = "The Target Temperature is " + TARGETTEMPERATURE + "ºC";
-  fill(50);
-  text(s, 320, 15, 200, 20);  // Text wraps within text box
-  line(40,134,760,134);  //Line at 250ºC
+
+  //!use the funtion interpolate to set the height
+  line(40,134,760,134);  //Line at TARGET TEMPERATURE
   
   //Draw the legend of colors at the bottom of the screen
   noStroke();
@@ -236,6 +253,18 @@ void drawGraph() {
   
 }
 
+//Prints the current time with a resolution of milliseconds
+void printTime() {
+   noStroke();
+   //Draw a white rectangle to delete the text
+   fill(255);
+   rect(525,625,100,20);
+   fill(0);
+   textSize(12);
+   text("Time: " + millis()/1000.0 + " s",525,620,100,20); 
+}
+
+//Prints the Legend of the 6 temperatures with the current temperature
 void printTemperaturesLegend() {
   int i;
   int offset = 55;
@@ -269,7 +298,7 @@ void printTemperaturesLegend() {
 void interpolate() {
 }
 
-//This is where the magic happens
+//This is where the magic happens. Gets the values from the COM Port and map them to the Graph
 void serialEvent (Serial SerialPort) {
   // get the ASCII string:
   inString = SerialPort.readStringUntil('\n');
