@@ -19,7 +19,7 @@ String selectedCOMPORT;
 String[] serialPorts = new String[20];
 //this values are fixed by firmware. There are needed to show the graph correctly
 int MAXTEMPERATURE = 300;
-int TARGETTEMPERATURE = 250;
+int TARGETTEMPERATURE = 260;
 //****************************************************************************************
 Serial SerialPort;    //The serial port
 

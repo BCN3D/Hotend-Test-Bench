@@ -52,9 +52,9 @@ double inputs[6];
 double outputs[6];
 double setTemperature;
 //PID Settings
-double kp = 15.16;
-double kd = 49.38;
-double ki = 1.16;
+double kp = 20;
+double kd = 20;
+double ki = 1;
 //bytes for the shift Registers
 byte leds1;
 byte leds2;
