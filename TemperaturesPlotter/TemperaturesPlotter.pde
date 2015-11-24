@@ -210,8 +210,9 @@ void drawGraph() {
   stroke(0);
   rect(graphMargin,graphMargin,graphSpaceX, graphSpaceY);
 
-  //!use the funtion interpolate to set the height
-  line(40,134,760,134);  //Line at TARGET TEMPERATURE
+  //map the target temperature to the graph
+  int targetTemperatureHeight = int(map(TARGETTEMPERATURE, 0, MAXTEMPERATURE, graphSpaceY+graphMargin+10, graphMargin ));
+  line(graphMargin, targetTemperatureHeight, sizeX - graphMargin, targetTemperatureHeight);  //Line at TARGET TEMPERATURE
   
   //Draw the legend of colors at the bottom of the screen
   noStroke();
@@ -295,8 +296,8 @@ void printTemperaturesLegend() {
     }
 }
 
-void interpolate() {
-}
+//void interpolate() {
+//}
 
 //This is where the magic happens. Gets the values from the COM Port and map them to the Graph
 void serialEvent (Serial SerialPort) {
