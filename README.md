@@ -4,8 +4,9 @@ This project is a test bench for BCN3D Technologies.
 It consist on a electronics Board to test out 6 Hotends at a time. It basically heats up the 6 hotends to a specified temperature and then cools them down.
 It verifies that the time to do the cycle is correct.
 
-You can find all the files in eagle, the BOM and the Gerbers.
-The files are from the version 1.0 and we're waiting for the boards to arrive.
+![Hotend Test Jig][system]
+
+[system]:  https://github.com/BCN3D/Hotend-Test-Jig/blob/master/img/system.JPG
 
 #### Folders
 
@@ -33,8 +34,8 @@ Board Rear
 
 ![Board Rear][board_rear]
 
-[board_front]:
-[board_front]:
+[board_front]: https://github.com/BCN3D/Hotend-Test-Jig/blob/master/img/board_front.JPG
+[board_rear]: https://github.com/BCN3D/Hotend-Test-Jig/blob/master/img/board_rear.JPG
 
 ## Code
 The code uses the [PID library](http://playground.arduino.cc/Code/PIDLibrary) for Arduino and a home made [hotend class](https://github.com/BCN3D/Hotend-Test-Jig/blob/master/Code/hotend.h).
@@ -42,6 +43,12 @@ The code uses the [PID library](http://playground.arduino.cc/Code/PIDLibrary) fo
 First it does a startup flashing the LEDs, opens a Serial port and then it checks if the hotends are connected or not by checking the thermistor resistance.
 
 Then the heat up process starts. Every 500ms a packet is sent through the serial port with the six temperatures. This packet is received by the computer and a [Processing](http://processing.org) program plots the data.
+
+Main Screen of the Processing program:
+
+![TemperaturesPlotter][plotter]
+
+[plotter]: https://github.com/BCN3D/Hotend-Test-Jig/blob/master/img/temperaturePlotter.PNG
 
 When the  hotends are heating, the LEDs blink as well. Finally, when the target temperature is reached, the hotends start cooling down with the help of a couple of fans.
 
@@ -53,7 +60,7 @@ The Mechanics are quite simple. Basically we designed a bench to hold the hotend
 The cover from behind is a 3mm PMMA sheet laser cut and handcrafted bent.
 
 ## To do
-- [] Clear button to clear the graph area.
-- [] Export data to a `.xmml` or `.csv` file and import it in Excel.
+- [ ] Clear button to clear the graph area.
+- [ ] Export data to a `.xmml` or `.csv` file and import it in Excel.
 - [x] Splash Screen.
-- [] Mouse gives you temperature in the graph.
+- [ ] Mouse gives you temperature in the graph.
