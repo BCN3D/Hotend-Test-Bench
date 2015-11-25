@@ -40,6 +40,8 @@ Board Rear
 ## Code
 The code uses the [PID library](http://playground.arduino.cc/Code/PIDLibrary) for Arduino and a home made [hotend class](https://github.com/BCN3D/Hotend-Test-Jig/blob/master/Code/hotend.h).
 
+The conversion to temperature is calculated with the Steinhart-Hart equation. You can find the guidelines of this conversion in the [adafruit learning system](https://learn.adafruit.com/thermistor?view=all). It would be better to do some table look-up but the code is harder...
+
 First it does a startup flashing the LEDs, opens a Serial port and then it checks if the hotends are connected or not by checking the thermistor resistance.
 
 Then the heat up process starts. Every 500ms a packet is sent through the serial port with the six temperatures. This packet is received by the computer and a [Processing](http://processing.org) program plots the data.
