@@ -23,7 +23,7 @@ So you should know what you are doing.
 #define MAXTEMPERATURE 250
 #define MINTEMPERATURE 0
 #define SECURITYTEMPERATURE 50
-#define UPDATEINTERVAL 250 //compute everything every half second
+#define UPDATEINTERVAL 250 //compute everything every quarter of a second
 
 const char* tempSensors[]= {"THERM0","THERM1","THERM2","THERM3","THERM4","THERM5"};
 #define THERM0 A5
@@ -109,6 +109,8 @@ void setup()
   Serial.begin(115200);
   delay(100);
   Serial.println("Starting the Hotend Test Jig...");
+  delay(250);
+  printSettings();
   delay(250);
   startLEDs();
 
@@ -435,5 +437,29 @@ void parseCommand(String com)	{
 		kdTemp = 0;
 	}
 		
+	
+}
+void printSettings() {
+	Serial.println("Printing all the Current Settings...");
+	
+	Serial.print("MAXTEMPERATURE (C): ");
+	Serial.println(MAXTEMPERATURE);
+	
+	Serial.print("MINTEMPERATURE (C): ");
+	Serial.println(MINTEMPERATURE);
+
+	Serial.print("SECURITYTEMPERATURE (C): ");
+	Serial.println(SECURITYTEMPERATURE);
+	
+	Serial.print("UPDATEINTERVAL (mS): ");
+	Serial.println(UPDATEINTERVAL);
+	
+	Serial.print("MEANHEATINGTIME (mS): ");
+	Serial.println(MEANHEATINGTIME);
+	
+	Serial.print("MARGINERROR (%): ");
+	Serial.println(MARGINERROR*100,0);
+	
+	//End of parameters print
 	
 }

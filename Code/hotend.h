@@ -18,8 +18,8 @@ LED lights up, if not a red LED lights up.
 #define THERMISTORNOMINAL 100000
 #define BCOEFFICIENT 3950
 #define MAXTEMPERATURE 260
-#define MEANHEATINGTIME 72500	//Mean time that takes to heat the extruder
-
+#define MEANHEATINGTIME 67500	//Mean time that takes to heat the extruder
+#define MARGINERROR 0.15
 
 class hotend
 {
@@ -84,7 +84,7 @@ void readTemperature() {
 bool manageTime() {
 	stopTime = millis();
 	startTime += 250;	//Add the 0.25 seconds delay and a margin
-	if ((stopTime - startTime) >= MEANHEATINGTIME*0.85 && (stopTime- startTime) <= MEANHEATINGTIME*1.15)
+	if ((stopTime - startTime) >= MEANHEATINGTIME*(1-MARGINERROR) && (stopTime- startTime) <= MEANHEATINGTIME*(1+MARGINERROR))
 	{
 		//Timing is correct so GREEN LED
 		return true;
