@@ -11,7 +11,7 @@ LED lights up, if not a red LED lights up.
 
 ----------------------------------------------------------------------*/
 #include "Arduino.h"
-
+//Make this values dependant on the input from the user. This will let us test other types of hotends.
 #define NUMSAMPLES 5
 #define SERIESRESISTOR 4700
 #define TEMPERATURENOMINAL 25
@@ -92,6 +92,7 @@ bool manageTime() {
 		//Timing is incorrect so RED LED 
 		return false;
 	}
+	//Store the time taken to heat up somehow and the correct/fail ratio
 	
 }
 

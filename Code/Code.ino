@@ -358,6 +358,7 @@ void setPIDtunings(double Kp, double Ki, double Kd) {
 	kd = Kd;
 }
 void commands()	{
+	//Make the USB command parsing function work in order to view and set some parameters
 	while (Serial.available() > 0)
 	{
 		char c = Serial.read();

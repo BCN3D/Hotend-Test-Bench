@@ -11,12 +11,7 @@ eagle.epf
 
 #Atmel Studio
 
-*.cppproj
-*.atsln
-Code/Visual Micro/
-Code/Debug/
-Code/__vm
-Code/.vs
+
 
 #################
 ## Eclipse

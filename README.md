@@ -61,8 +61,11 @@ The Mechanics are quite simple. Basically we designed a bench to hold the hotend
 
 The cover from behind is a 3mm PMMA sheet laser cut and handcrafted bent.
 
-## To do
+## To do in the TemperaturesPlotter
 - [ ] Clear button to clear the graph area.
-- [ ] Export data to a `.xmml` or `.csv` file and import it in Excel.
+- [ ] Start the time when the COM port is selected.
+- [ ] Fix the target temperature bar to the correct temperature.
+- [ ] Calculate the time to heat for each hotend
+- [ ] Export data to a `.xmml` or `.csv` file and import it in Excel. To Database purposes
 - [x] Splash Screen.
 - [ ] Mouse gives you temperature in the graph.
