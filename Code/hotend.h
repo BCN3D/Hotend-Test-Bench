@@ -18,7 +18,7 @@ LED lights up, if not a red LED lights up.
 #define THERMISTORNOMINAL 100000
 #define BCOEFFICIENT 3950
 #define MAXTEMPERATURE 260
-#define MEANHEATINGTIME 67500	//Mean time that takes to heat the extruder
+#define MEANHEATINGTIME 60000	//Mean time that takes to heat the extruder
 #define MARGINERROR 0.15
 
 class hotend
@@ -38,14 +38,15 @@ bool state;
 double averageTemp;				//Average Temp calculated from samples
 double tempCelsius;				//Degrees celsius value
 bool hotendState;
+unsigned long timeToHeat;
 
 hotend(int therm,int heater) {
 	heaterPin = heater;
 	thermistorPin = therm;
 	pinMode(heaterPin, OUTPUT);
-
 	startTime = millis();
 	stopTime = 0;
+	timeToHeat = 0;
 	averageTemp = 0;
 	tempCelsius = 0;
 	state = 0; //State 0 for heating and 1 for cooling
@@ -83,8 +84,12 @@ void readTemperature() {
 }
 bool manageTime() {
 	stopTime = millis();
+	Serial.println(stopTime);
 	startTime += 250;	//Add the 0.25 seconds delay and a margin
-	if ((stopTime - startTime) >= MEANHEATINGTIME*(1-MARGINERROR) && (stopTime- startTime) <= MEANHEATINGTIME*(1+MARGINERROR))
+	Serial.println(startTime);
+	timeToHeat = stopTime - startTime;
+	Serial.println(timeToHeat);
+	if (timeToHeat >= MEANHEATINGTIME*(1-MARGINERROR) && timeToHeat <= MEANHEATINGTIME*(1+MARGINERROR))
 	{
 		//Timing is correct so GREEN LED
 		return true;
@@ -93,7 +98,6 @@ bool manageTime() {
 		return false;
 	}
 	//Store the time taken to heat up somehow and the correct/fail ratio
-	
 }
 
 void update(double output) {	

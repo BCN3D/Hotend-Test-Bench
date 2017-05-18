@@ -60,6 +60,7 @@ byte leds1;
 byte leds2;
 
 unsigned long previousMillis = 0;	//Last time Hotend updated
+unsigned long currentMillis = 0;
 
 //--------------------OBJECTS-------------------------------------------
 //---Let's declare de hotends objects
@@ -121,10 +122,11 @@ void setup()
 void loop()
 {
 	uint8_t i;
-	commands();
-	unsigned long currentMillis = millis();
+	//commands();
+	currentMillis = millis();
 	if (currentMillis - previousMillis >= UPDATEINTERVAL)
 	{
+		//Serial.println(currentMillis);
 		previousMillis = currentMillis;
 		for (i=0 ; i<6; i++)
 		{
@@ -158,9 +160,9 @@ void loop()
 					default:
 						//Do nothing
 					break;
-				}
+				} //End if connected hotends
 				hotends[i].update(outputs[i]);
-			} //End if connected hotends
+			} //End FOR loop
 				if (hotends[i].state == 1)	//Heating done. Temperature Reached
 				{
 					manageLEDs(hotends[i].hotendState, i);
